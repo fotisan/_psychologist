@@ -35,6 +35,7 @@
         <a href="#top">Αρχική</a>
         <a href="#services">Υπηρεσίες</a>
         <a href="#help">Πώς βοηθάω</a>
+        <a href="#space" class="">Ο χώρος</a>
         <a href="#contact" class="btn btn--sm btn--outline">Επικοινωνία</a>
       </nav>
     </div>
@@ -45,6 +46,7 @@
         <a href="#top">Αρχική</a>
         <a href="#services">Υπηρεσίες</a>
         <a href="#help">Πώς βοηθάω</a>
+        <a href="#space">Ο χώρος</a>
         <a href="#faq">FAQ</a>
         <a href="#contact" class="btn btn--primary">Προγραμματισμός συνεδρίας</a>
       </div>
@@ -92,8 +94,10 @@
 
         <!-- Right side: Visual + (optional) Office photo slot -->
         <div class="hero-visual" aria-label="Οπτικό πλαίσιο">
-          <div class="office-photo" aria-label="Θέση για φωτογραφία γραφείου (προαιρετικά)">
-            <!-- <img src="assets/office.jpg" alt="Ο χώρος του γραφείου" loading="lazy"> -->
+          <div class="office-photo" aria-label="Φωτογραφία γραφείου">
+            <!-- Αν δεν έχεις ακόμα εικόνα, άφησε το img σχολιασμένο -->
+            <!-- <img src="assets/office-main.jpg" alt="Ο χώρος του γραφείου" loading="lazy"> -->
+            <img src="assets/office-main.jpg" alt="Ο χώρος του γραφείου" loading="lazy">
           </div>
 
           <div class="visual-card" aria-hidden="true">
@@ -172,6 +176,47 @@
             <p class="micro">
               Αν δεν είστε σίγουροι από πού να ξεκινήσετε, μια πρώτη επικοινωνία αρκεί.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ NEW: SPACE / OFFICE IMAGES -->
+    <section class="section" id="space" aria-label="Ο χώρος">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2">Ο χώρος</h2>
+          <p class="sub">
+            Ένα ήρεμο, διακριτικό περιβάλλον που βοηθά να νιώσετε ασφάλεια και να μιλήσετε με άνεση.
+          </p>
+        </div>
+
+        <div class="space-grid">
+          <figure class="space-main">
+            <img src="assets/office-main.jpg" alt="Κεντρική εικόνα του χώρου του γραφείου" loading="lazy">
+          </figure>
+
+          <div class="space-side">
+            <figure class="space-tile">
+              <img src="assets/office-detail-1.jpg" alt="Λεπτομέρεια από τον χώρο (π.χ. βιβλία ή φωτισμός)" loading="lazy">
+            </figure>
+
+            <figure class="space-tile">
+              <img src="assets/office-detail-2.jpg" alt="Λεπτομέρεια από τον χώρο (π.χ. πολυθρόνα ή διακόσμηση)" loading="lazy">
+            </figure>
+
+            <div class="space-notes">
+              <ul class="space-bullets">
+                <li><span class="dot dot--soft" aria-hidden="true"></span> Διακριτικότητα & ησυχία</li>
+                <li><span class="dot dot--soft" aria-hidden="true"></span> Άνετος χώρος, χωρίς “ιατρικό” ύφος</li>
+                <li><span class="dot dot--soft" aria-hidden="true"></span> Φιλικό πλαίσιο για παιδιά/εφήβους</li>
+              </ul>
+
+              <div class="space-cta">
+                <a class="btn btn--primary" href="#contact">Κλείστε συνεδρία</a>
+                <a class="btn btn--outline" href="#services">Υπηρεσίες</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -351,9 +396,13 @@
 
         <div class="contact-grid">
           <div class="contact-card">
+            <!-- ✅ NEW: contact cover image -->
+            <div class="contact-cover" aria-label="Εικόνα χώρου">
+              <img src="assets/office-contact.jpg" alt="Μια ήρεμη γωνία του χώρου" loading="lazy">
+            </div>
+
             <h3 class="h3">Στείλτε μήνυμα</h3>
 
-            <!-- Replace action with your form endpoint (Formspree / Netlify Forms etc.) -->
             <form class="contact-form" action="#" method="post">
               <label class="field">
                 <span class="field-label">Ονοματεπώνυμο</span>
