@@ -441,6 +441,15 @@
         window.scrollTo({ top: 0, behavior: prefersReduced ? "auto" : "smooth" });
       });
     })();
+
+    // header glass only after scroll
+(function(){
+  const header = document.querySelector(".site-header");
+  const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 10);
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
+
   </script>
 </body>
 </html>
