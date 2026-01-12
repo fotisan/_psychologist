@@ -86,15 +86,24 @@ svg{ width: 22px; height: 22px; }
 }
 .skip-link:focus{ left: 12px; }
 
-/* Header */
+/* -------------------------------------------
+   Header (glass only after scroll)
+------------------------------------------- */
 .site-header{
   position: sticky;
   top: 0;
   z-index: 50;
-  backdrop-filter: blur(12px);
-  background: rgba(246,241,234,.78);
+  background: rgba(246,241,234,.55);
   border-bottom: 1px solid rgba(230,221,209,.85);
+  transition: background .2s ease, backdrop-filter .2s ease;
 }
+
+.site-header.is-scrolled{
+  background: rgba(249, 247, 242, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .header-inner{
   display:flex;
   align-items:center;
@@ -139,9 +148,9 @@ svg{ width: 22px; height: 22px; }
   display:flex;
   flex-direction: column;
   line-height: 1.15;
-  padding: 0;                 /* removed */
-  border: 0;                  /* removed */
-  background: transparent;     /* removed */
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .brand-name{
@@ -691,7 +700,7 @@ svg{ width: 22px; height: 22px; }
   color: rgba(31,29,26,.66);
 }
 
-/* ✅ Back to top button (modern) */
+/* Back to top */
 .to-top{
   position: fixed;
   right: 18px;
@@ -722,6 +731,25 @@ svg{ width: 22px; height: 22px; }
   background: rgba(255,255,255,.92);
   border-color: rgba(200,165,123,.60);
 }
+
+/* -------------------------------------------
+   Fade-in sections + staggered services
+------------------------------------------- */
+.fade-in-section{
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s ease-out, transform .6s ease-out;
+  will-change: opacity, transform;
+}
+.fade-in-section.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger only for services cards */
+#services .card.fade-in-section:nth-child(1){ transition-delay: .10s; }
+#services .card.fade-in-section:nth-child(2){ transition-delay: .20s; }
+#services .card.fade-in-section:nth-child(3){ transition-delay: .30s; }
 
 /* Responsive */
 @media (min-width: 860px){
@@ -765,10 +793,9 @@ svg{ width: 22px; height: 22px; }
   *{ scroll-behavior: auto !important; transition: none !important; }
   #services .card, #services .card:hover{ transform: none !important; }
   .to-top{ transition: none !important; }
+
+  .fade-in-section{
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
-Header Glassmorphism: Στο .navbar, δοκίμασε να προσθέσεις ένα ελαφρύ blur όταν σκρολάρει ο χρήστης, για να μη "κόβεται" απότομα το κείμενο από πίσω:
-
-CSS
-
-background: rgba(249, 247, 242, 0.8);
-backdrop-filter: blur(10px);
