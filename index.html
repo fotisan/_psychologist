@@ -24,13 +24,32 @@
         </span>
       </a>
 
-      <nav class="nav" aria-label="Κύρια πλοήγηση">
+      <!-- Mobile toggle -->
+      <button class="nav-toggle" type="button" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="siteNav">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <nav class="nav" id="siteNav" aria-label="Κύρια πλοήγηση">
+        <a href="#top">Αρχική</a>
         <a href="#services">Υπηρεσίες</a>
-        <a href="#process">Πώς δουλεύουμε</a>
-        <a href="#expertise">Εξειδίκευση</a>
-        <a href="#faq">FAQ</a>
+        <a href="#help">Πώς βοηθάω</a>
+        <a href="#expertise">Εκπαίδευση</a>
         <a href="#contact" class="btn btn--sm btn--outline">Επικοινωνία</a>
       </nav>
+    </div>
+
+    <!-- Mobile nav panel -->
+    <div class="mobile-nav" aria-hidden="true">
+      <div class="mobile-nav-inner">
+        <a href="#top">Αρχική</a>
+        <a href="#services">Υπηρεσίες</a>
+        <a href="#help">Πώς βοηθάω</a>
+        <a href="#expertise">Εκπαίδευση</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn--primary">Προγραμματισμός συνεδρίας</a>
+      </div>
     </div>
   </header>
 
@@ -50,11 +69,13 @@
             με στόχο ουσιαστική αλλαγή στην καθημερινότητα.
           </p>
 
+          <!-- CTA immediately visible -->
           <div class="hero-cta">
-            <a class="btn btn--primary" href="#contact">Κλείστε ραντεβού</a>
-            <a class="btn btn--ghost" href="#services">Δείτε υπηρεσίες</a>
+            <a class="btn btn--primary" href="#contact">Προγραμματισμός συνεδρίας</a>
+            <a class="btn btn--ghost" href="#help">Δείτε πώς βοηθάω</a>
           </div>
 
+          <!-- Trust bits (no testimonials) -->
           <div class="trust-row" role="list" aria-label="Σύντομα στοιχεία εμπιστοσύνης">
             <div class="trust" role="listitem">
               <span class="dot" aria-hidden="true"></span>
@@ -73,10 +94,6 @@
 
         <!-- Right side: Visual + (optional) Office photo slot -->
         <div class="hero-visual" aria-label="Οπτικό πλαίσιο">
-          <!-- ΚΕΝΟ ΓΙΑ ΦΩΤΟ ΓΡΑΦΕΙΟΥ (προαιρετικό)
-               Όταν έχεις εικόνα, βάλε:
-               <img src="assets/office.jpg" alt="Ο χώρος του γραφείου" loading="lazy">
-          -->
           <div class="office-photo" aria-label="Θέση για φωτογραφία γραφείου (προαιρετικά)">
             <!-- <img src="assets/office.jpg" alt="Ο χώρος του γραφείου" loading="lazy"> -->
           </div>
@@ -113,6 +130,50 @@
                 <span class="badge-text">Υποστήριξη οικογένειας</span>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1B: PROBLEM -> SOLUTION -->
+    <section class="section section--soft" id="help" aria-label="Πώς μπορώ να σας βοηθήσω;">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2">Πώς μπορώ να σας βοηθήσω;</h2>
+          <p class="sub">
+            Αν νιώθετε ότι κάτι σας βαραίνει, δεν χρειάζεται να το “λύσετε” μόνοι σας. Δουλεύουμε μαζί με ήρεμο ρυθμό και καθαρά βήματα.
+          </p>
+        </div>
+
+        <div class="help-grid">
+          <div class="help-card">
+            <h3 class="h3">Συχνές δυσκολίες που δουλεύουμε</h3>
+            <ul class="help-list">
+              <li>Άγχος, υπερένταση, κρίσεις πανικού</li>
+              <li>Κατάθλιψη, χαμηλή διάθεση</li>
+              <li>Διαπροσωπικές σχέσεις & όρια</li>
+              <li>Αυτοεκτίμηση, αυτοβελτίωση</li>
+              <li>Παιδιά/έφηβοι: συμπεριφορά, ρύθμιση συναισθήματος</li>
+            </ul>
+
+            <div class="mini-cta">
+              <a class="btn btn--primary" href="#contact">Στείλτε μήνυμα τώρα</a>
+              <a class="btn btn--outline" href="#services">Δείτε τις υπηρεσίες</a>
+            </div>
+          </div>
+
+          <div class="help-card">
+            <h3 class="h3">Τι να περιμένετε</h3>
+            <ul class="checklist">
+              <li><span class="check" aria-hidden="true">✓</span> Ένα ασφαλές πλαίσιο, χωρίς κριτική</li>
+              <li><span class="check" aria-hidden="true">✓</span> Στόχοι που συμφωνούμε μαζί</li>
+              <li><span class="check" aria-hidden="true">✓</span> Πρακτικά εργαλεία για την καθημερινότητα</li>
+              <li><span class="check" aria-hidden="true">✓</span> Σταθερότητα και συνέπεια στη διαδικασία</li>
+            </ul>
+
+            <p class="micro">
+              Αν δεν είστε σίγουροι από πού να ξεκινήσετε, μια πρώτη επικοινωνία αρκεί.
+            </p>
           </div>
         </div>
       </div>
@@ -238,7 +299,51 @@
       </div>
     </section>
 
-    <!-- SECTION 4: EXPERTISE -->
+    <!-- SECTION 4: SOCIAL PROOF (no testimonials) -->
+    <section class="section" id="proof" aria-label="Εμπιστοσύνη και διαπιστεύσεις">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2">Εμπιστοσύνη & διαπιστεύσεις</h2>
+          <p class="sub">
+            Χωρίς “κριτικές” και υπερβολές — μόνο ό,τι βοηθά έναν νέο άνθρωπο να νιώσει ασφάλεια και αξιοπιστία.
+          </p>
+        </div>
+
+        <div class="proof-grid">
+          <div class="panel">
+            <h3 class="h3">Σύλλογοι / Μέλη</h3>
+            <ul class="checklist">
+              <li><span class="check" aria-hidden="true">✓</span> (Προσθέστε) Σύλλογος / Μητρώο</li>
+              <li><span class="check" aria-hidden="true">✓</span> (Προσθέστε) Επαγγελματικό μητρώο / Αριθμός</li>
+            </ul>
+            <p class="micro">*Αν υπάρχει αριθμός μητρώου, μπαίνει εδώ με διακριτικότητα.</p>
+          </div>
+
+          <div class="panel">
+            <h3 class="h3">Πιστοποιήσεις</h3>
+            <div class="logos">
+              <div class="logo">ABA</div>
+              <div class="logo">RBT</div>
+              <div class="logo">WISC-V</div>
+              <div class="logo">Play Therapy</div>
+            </div>
+            <p class="micro">*Αν έχετε πραγματικά λογότυπα/σφραγίδες, τα βάζουμε αντί για αυτά τα placeholders.</p>
+          </div>
+
+          <div class="panel">
+            <h3 class="h3">Άρθρα / Δημοσιεύσεις</h3>
+            <ul class="links-list">
+              <li><a href="#" aria-label="Άρθρο 1">Άρθρο: Θέμα #1 (σύνδεσμος)</a></li>
+              <li><a href="#" aria-label="Άρθρο 2">Άρθρο: Θέμα #2 (σύνδεσμος)</a></li>
+              <li><a href="#" aria-label="Άρθρο 3">Άρθρο: Θέμα #3 (σύνδεσμος)</a></li>
+            </ul>
+            <p class="micro">*Αν δεν υπάρχουν άρθρα, βάλε “Εμφανίσεις σε μέσα / ομιλίες / σεμινάρια”.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: EXPERTISE -->
     <section class="section" id="expertise" aria-label="Εξειδίκευση και εκπαίδευση">
       <div class="container">
         <div class="section-head">
@@ -280,7 +385,7 @@
       </div>
     </section>
 
-    <!-- SECTION 5: FAQ -->
+    <!-- SECTION 6: FAQ -->
     <section class="section section--soft" id="faq" aria-label="Συχνές ερωτήσεις">
       <div class="container">
         <div class="section-head">
@@ -324,16 +429,47 @@
       </div>
     </section>
 
-    <!-- SECTION 6: LOCATION + CONTACT -->
+    <!-- SECTION 7: CONTACT (with form) -->
     <section class="section" id="contact" aria-label="Τοποθεσία και επικοινωνία">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">Επικοινωνία</h2>
-          <p class="sub">Για ραντεβού ή απορίες, επικοινωνήστε τηλεφωνικά ή με email.</p>
+          <p class="sub">Στείλτε ένα μήνυμα και θα σας απαντήσω σύντομα για ραντεβού ή απορίες.</p>
         </div>
 
         <div class="contact-grid">
           <div class="contact-card">
+            <h3 class="h3">Στείλτε μήνυμα</h3>
+
+            <!-- Replace action with your form endpoint (Formspree / Netlify Forms etc.) -->
+            <form class="contact-form" action="#" method="post">
+              <label class="field">
+                <span class="field-label">Ονοματεπώνυμο</span>
+                <input class="input" type="text" name="name" autocomplete="name" required placeholder="Π.χ. Μαρία Παπαδοπούλου">
+              </label>
+
+              <label class="field">
+                <span class="field-label">Email</span>
+                <input class="input" type="email" name="email" autocomplete="email" required placeholder="Π.χ. maria@email.com">
+              </label>
+
+              <label class="field">
+                <span class="field-label">Μήνυμα</span>
+                <textarea class="textarea" name="message" rows="5" required placeholder="Πείτε μου με λίγα λόγια τι σας απασχολεί και πώς μπορώ να βοηθήσω."></textarea>
+              </label>
+
+              <div class="form-actions">
+                <button class="btn btn--primary" type="submit">Αποστολή μηνύματος</button>
+                <a class="btn btn--outline" href="tel:+306949626413">Καλέστε τώρα</a>
+              </div>
+
+              <p class="micro form-note">
+                Με την αποστολή, αποδέχεστε ότι θα επικοινωνήσω μαζί σας στο email που δηλώσατε.
+              </p>
+            </form>
+
+            <div class="divider"></div>
+
             <h3 class="h3">Στοιχεία</h3>
 
             <div class="contact-item">
@@ -349,11 +485,6 @@
             <div class="contact-item">
               <span class="contact-label">Email</span>
               <a class="contact-value link" href="mailto:nicoletaplath@gmail.com">nicoletaplath@gmail.com</a>
-            </div>
-
-            <div class="contact-actions">
-              <a class="btn btn--primary" href="tel:+306949626413">Καλέστε τώρα</a>
-              <a class="btn btn--outline" href="mailto:nicoletaplath@gmail.com">Στείλτε email</a>
             </div>
 
             <p class="micro">
@@ -373,19 +504,20 @@
       </div>
     </section>
 
-    <!-- SECTION 7: FINAL CTA -->
+    <!-- SECTION 8: FINAL CTA (strong close) -->
     <section class="section cta" aria-label="Τελικό κάλεσμα">
       <div class="container cta-inner">
         <div class="cta-copy">
-          <h2 class="h2">Αν θέλετε να το συζητήσουμε, το πρώτο βήμα είναι ένα μήνυμα.</h2>
+          <h2 class="h2">Ας ξεκινήσουμε μαζί το ταξίδι της αυτογνωσίας.</h2>
           <p class="sub">
-            Ελάτε να δούμε τι σας δυσκολεύει και ποια προσέγγιση ταιριάζει καλύτερα στην περίπτωσή σας.
+            Αν κάτι σας δυσκολεύει, το πρώτο βήμα είναι απλό: στείλτε ένα μήνυμα σήμερα.
+            Θα απαντήσω σύντομα με διακριτικότητα και σεβασμό στο πλαίσιο.
           </p>
         </div>
 
         <div class="cta-actions">
-          <a class="btn btn--primary" href="tel:+306949626413">Κλείστε ραντεβού</a>
-          <a class="btn btn--ghost" href="mailto:nicoletaplath@gmail.com">Email</a>
+          <a class="btn btn--primary" href="#contact">Προγραμματισμός συνεδρίας</a>
+          <a class="btn btn--ghost" href="tel:+306949626413">Κλήση</a>
         </div>
       </div>
 
@@ -405,7 +537,47 @@
   </main>
 
   <script>
+    // year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    const toggle = document.querySelector(".nav-toggle");
+    const mobileNav = document.querySelector(".mobile-nav");
+    const body = document.body;
+
+    function closeMenu(){
+      toggle.setAttribute("aria-expanded", "false");
+      mobileNav.classList.remove("is-open");
+      mobileNav.setAttribute("aria-hidden", "true");
+      body.classList.remove("no-scroll");
+    }
+
+    function openMenu(){
+      toggle.setAttribute("aria-expanded", "true");
+      mobileNav.classList.add("is-open");
+      mobileNav.setAttribute("aria-hidden", "false");
+      body.classList.add("no-scroll");
+    }
+
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      expanded ? closeMenu() : openMenu();
+    });
+
+    // close when clicking outside inner
+    mobileNav.addEventListener("click", (e) => {
+      if(e.target === mobileNav) closeMenu();
+    });
+
+    // close when clicking a link
+    mobileNav.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", closeMenu);
+    });
+
+    // close on ESC
+    window.addEventListener("keydown", (e) => {
+      if(e.key === "Escape") closeMenu();
+    });
   </script>
 </body>
 </html>
