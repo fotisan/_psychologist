@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=1002" />
+  <link rel="stylesheet" href="styles.css?v=1003" />
 </head>
 
 <body id="top">
@@ -26,7 +26,7 @@
           <img src="assets/logo.png" alt="" loading="lazy">
         </span>
 
-        <!-- ✅ ΧΩΡΙΣ πλαίσιο πλέον -->
+        <!-- ✅ ΧΩΡΙΣ πλαίσιο -->
         <span class="brand-text">
           <span class="brand-name">Νικολέτα Πλατή</span>
           <span class="brand-sub">Ψυχολόγος • Ρόδος</span>
@@ -67,7 +67,7 @@
   <main id="main">
 
     <!-- HERO -->
-    <section class="section hero" aria-label="Hero">
+    <section class="section hero fade-in-section" aria-label="Hero">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Ψυχολογική υποστήριξη στη Ρόδο</p>
@@ -120,7 +120,7 @@
     </section>
 
     <!-- SERVICES -->
-    <section class="section section--soft" id="services" aria-label="Υπηρεσίες">
+    <section class="section section--soft fade-in-section" id="services" aria-label="Υπηρεσίες">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">Υπηρεσίες</h2>
@@ -129,8 +129,7 @@
 
         <div class="cards-grid">
 
-          <!-- ✅ Icon: Talk bubble -->
-          <article class="card">
+          <article class="card fade-in-section">
             <div class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M8 18l-3 3v-4a7 7 0 01-1-4c0-4.1 3.6-7 8-7s8 2.9 8 7-3.6 7-8 7H8z"
@@ -148,8 +147,7 @@
             </ul>
           </article>
 
-          <!-- ✅ Icon: Puzzle -->
-          <article class="card">
+          <article class="card fade-in-section">
             <div class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M14 4h2a2 2 0 012 2v2a2 2 0 00-2 2 2 2 0 002 2v2a2 2 0 01-2 2h-2"
@@ -171,8 +169,7 @@
             </ul>
           </article>
 
-          <!-- ✅ Icon: Target / goals -->
-          <article class="card">
+          <article class="card fade-in-section">
             <div class="icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M12 21a9 9 0 110-18 9 9 0 010 18z"
@@ -199,7 +196,7 @@
     </section>
 
     <!-- HELP -->
-    <section class="section" id="help" aria-label="Πώς βοηθάω">
+    <section class="section fade-in-section" id="help" aria-label="Πώς βοηθάω">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">Πώς μπορώ να σας βοηθήσω</h2>
@@ -220,7 +217,7 @@
     </section>
 
     <!-- SPACE -->
-    <section class="section section--soft" id="space" aria-label="Ο χώρος">
+    <section class="section section--soft fade-in-section" id="space" aria-label="Ο χώρος">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">Ο χώρος</h2>
@@ -247,7 +244,7 @@
     </section>
 
     <!-- PROCESS -->
-    <section class="section" id="process" aria-label="Διαδικασία">
+    <section class="section fade-in-section" id="process" aria-label="Διαδικασία">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">Διαδικασία</h2>
@@ -263,7 +260,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="section section--soft" id="faq" aria-label="Συχνές ερωτήσεις">
+    <section class="section section--soft fade-in-section" id="faq" aria-label="Συχνές ερωτήσεις">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">Συχνές ερωτήσεις</h2>
@@ -281,7 +278,6 @@
             <div class="faq-body"><p class="p">Ναι, όπου χρειάζεται.</p></div>
           </details>
 
-          <!-- ✅ +2 νέα πεδία -->
           <details class="faq">
             <summary>Πόσες συνεδρίες θα χρειαστώ;</summary>
             <div class="faq-body"><p class="p">Εξαρτάται από το αίτημα και τους στόχους. Συνήθως το ξεκαθαρίζουμε στις πρώτες συνεδρίες και το επαναξιολογούμε στην πορεία.</p></div>
@@ -296,7 +292,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="section" id="contact" aria-label="Επικοινωνία">
+    <section class="section fade-in-section" id="contact" aria-label="Επικοινωνία">
       <div class="container">
         <div class="section-head">
           <h2 class="h2">Επικοινωνία</h2>
@@ -348,12 +344,11 @@
     <footer class="footer">
       <div class="container footer-inner">
         <p class="fine">© <span id="year"></span> Νικολέτα Πλατή</p>
-        <!-- ✅ έβγαλα το "Πάνω" από εδώ -->
       </div>
     </footer>
   </main>
 
-  <!-- ✅ Back to top button -->
+  <!-- Back to top -->
   <button class="to-top" type="button" aria-label="Πάνω" title="Πάνω">
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M12 5l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -424,7 +419,7 @@
       });
     })();
 
-    // ✅ Back to top button behavior
+    // Back to top button behavior
     (function(){
       const btn = document.querySelector(".to-top");
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -442,14 +437,31 @@
       });
     })();
 
-    // header glass only after scroll
-(function(){
-  const header = document.querySelector(".site-header");
-  const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 10);
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-})();
+    // ✅ header glass only after scroll
+    (function(){
+      const header = document.querySelector(".site-header");
+      const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 10);
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    })();
 
+    // ✅ Reveal on scroll (fade-in-section)
+    (function(){
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (prefersReduced) return;
+
+      const els = document.querySelectorAll(".fade-in-section");
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -10% 0px" });
+
+      els.forEach(el => obs.observe(el));
+    })();
   </script>
 </body>
 </html>
