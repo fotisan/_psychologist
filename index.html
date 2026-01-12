@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ψυχολόγος στη Ρόδο — Συμβουλευτική • Παιγνιοθεραπεία • ABA</title>
   <meta name="description" content="Ψυχολογική υποστήριξη στη Ρόδο. Συμβουλευτική, Παιγνιοθεραπεία και Θεραπεία Συμπεριφοράς (ABA). Κλείστε ραντεβού." />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -18,7 +19,7 @@
       <a class="brand" href="#top" aria-label="Αρχική">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">
-          <span class="brand-name">Νικολέτα</span>
+          <span class="brand-name">Νικολέτα Πλατή</span>
           <span class="brand-sub">Ψυχολόγος • Ρόδος</span>
         </span>
       </a>
@@ -70,8 +71,17 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="visual-card">
+        <!-- Right side: Visual + (optional) Office photo slot -->
+        <div class="hero-visual" aria-label="Οπτικό πλαίσιο">
+          <!-- ΚΕΝΟ ΓΙΑ ΦΩΤΟ ΓΡΑΦΕΙΟΥ (προαιρετικό)
+               Όταν έχεις εικόνα, βάλε:
+               <img src="assets/office.jpg" alt="Ο χώρος του γραφείου" loading="lazy">
+          -->
+          <div class="office-photo" aria-label="Θέση για φωτογραφία γραφείου (προαιρετικά)">
+            <!-- <img src="assets/office.jpg" alt="Ο χώρος του γραφείου" loading="lazy"> -->
+          </div>
+
+          <div class="visual-card" aria-hidden="true">
             <div class="visual-card-top">
               <span class="pill">Play Therapy</span>
               <span class="pill">ABA</span>
@@ -121,7 +131,6 @@
         <div class="cards-grid">
           <article class="card">
             <div class="icon" aria-hidden="true">
-              <!-- chat bubble -->
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M7 18l-3 3V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-2 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
               </svg>
@@ -139,7 +148,6 @@
 
           <article class="card">
             <div class="icon" aria-hidden="true">
-              <!-- puzzle -->
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M9 3h6v4a2 2 0 1 0 0 4v4H9v-4a2 2 0 1 0 0-4V3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
                 <path d="M9 15v6H3v-6h6zM21 15v6h-6v-6h6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
@@ -158,7 +166,6 @@
 
           <article class="card">
             <div class="icon" aria-hidden="true">
-              <!-- pathway -->
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M6 20c0-6 12-2 12-10 0-3-2-5-6-5S6 7 6 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
                 <path d="M6 10l-2-2m2 2l2-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -336,13 +343,11 @@
 
             <div class="contact-item">
               <span class="contact-label">Τηλέφωνο</span>
-              <!-- Αν χρειαστεί, άλλαξε το νούμερο εδώ -->
               <a class="contact-value link" href="tel:+306949626413">694 962 6413</a>
             </div>
 
             <div class="contact-item">
               <span class="contact-label">Email</span>
-              <!-- Αν χρειαστεί, άλλαξε το email εδώ -->
               <a class="contact-value link" href="mailto:nicoletaplath@gmail.com">nicoletaplath@gmail.com</a>
             </div>
 
@@ -357,7 +362,6 @@
           </div>
 
           <div class="map-card" aria-label="Χάρτης">
-            <!-- Μπορείς να αντικαταστήσεις το embed με ακριβές Google Maps link όταν το έχεις -->
             <iframe
               title="Χάρτης - Ρόδος"
               loading="lazy"
@@ -401,7 +405,6 @@
   </main>
 
   <script>
-    // μικρό helper για το έτος (προαιρετικό)
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
