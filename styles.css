@@ -530,6 +530,22 @@ svg{ width: 22px; height: 22px; }
 }
 
 
+  /* HERO photo sizing (override office-photo only when used in hero) */
+.hero .office-photo{
+  min-height: 0;
+  height: 280px;
+  max-height: 280px;
+}
+
+@media (min-width: 860px){
+  .hero .office-photo{
+    height: 300px;
+    max-height: 300px;
+  }
+}
+
+
+
 /* Cards */
 .cards-grid{ display:grid; gap: 14px; }
 .card{
