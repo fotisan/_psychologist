@@ -571,68 +571,6 @@ svg{ width: 22px; height: 22px; }
   color: rgba(31,29,26,.90);
 }
 
-/* Proof */
-.proof-grid{
-  display:grid;
-  gap: 14px;
-}
-.panel{
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(222,211,196,.95);
-  background: rgba(255,255,255,.82);
-  padding: 18px;
-  box-shadow: var(--shadow-soft);
-}
-.checklist{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display:grid;
-  gap: 10px;
-}
-.check{
-  display:inline-grid;
-  place-items:center;
-  width: 22px;
-  height: 22px;
-  border-radius: 999px;
-  background: rgba(127,174,160,.16);
-  border: 1px solid rgba(127,174,160,.28);
-  color: rgba(31,29,26,.90);
-  margin-right: 10px;
-  font-weight: 900;
-  font-size: 12px;
-}
-
-.logos{
-  display:flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-.logo{
-  padding: 10px 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(222,211,196,.95);
-  background: rgba(255,255,255,.74);
-  color: rgba(31,29,26,.84);
-  font-weight: 800;
-  font-size: 12px;
-  letter-spacing: .2px;
-}
-.links-list{
-  margin: 10px 0 0;
-  padding-left: 18px;
-}
-.links-list a{
-  color: rgba(31,29,26,.90);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(200,165,123,.55);
-}
-.links-list a:hover{
-  border-bottom-color: rgba(200,165,123,.9);
-}
-
 /* FAQ */
 .faq-grid{
   display:grid;
@@ -870,10 +808,6 @@ svg{ width: 22px; height: 22px; }
   }
   .help-grid{
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .proof-grid{
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
   }
 }
