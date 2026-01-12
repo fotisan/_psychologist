@@ -50,6 +50,8 @@ body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
   color: var(--ink);
   line-height: 1.55;
+
+  /* ✅ CHANGE #1: ONE unified background (body only) */
   background:
     radial-gradient(1100px 700px at 12% -10%, rgba(200,165,123,.18), transparent 55%),
     radial-gradient(900px 600px at 92% 5%, rgba(230,193,177,.18), transparent 55%),
@@ -105,17 +107,29 @@ svg{ width: 22px; height: 22px; }
   text-decoration: none;
   min-width: 220px;
 }
+
+/* ✅ CHANGE #3: Brand mark supports image (still looks circular) */
 .brand-mark{
   width: 34px;
   height: 34px;
   border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(222,211,196,.9);
+  box-shadow: 0 10px 24px rgba(31,29,26,.08);
   background:
     radial-gradient(circle at 30% 30%, rgba(200,165,123,.95), rgba(200,165,123,.18) 55%, transparent 60%),
     radial-gradient(circle at 70% 70%, rgba(127,174,160,.55), transparent 55%),
     radial-gradient(circle at 70% 20%, rgba(230,193,177,.55), transparent 58%);
-  border: 1px solid rgba(222,211,196,.9);
-  box-shadow: 0 10px 24px rgba(31,29,26,.08);
+  display: grid;
+  place-items: center;
 }
+.brand-mark img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+}
+
 .brand-text{ display:flex; flex-direction: column; line-height: 1.15; }
 .brand-name{ font-weight: 740; letter-spacing: .1px; }
 .brand-sub{ font-size: 12px; color: rgba(31,29,26,.72); margin-top: 2px; }
@@ -207,8 +221,10 @@ svg{ width: 22px; height: 22px; }
 .section{
   padding: var(--space-m) 0;
 }
+
+/* ✅ CHANGE #1: remove section background so body background looks continuous */
 .section--soft{
-  background: linear-gradient(180deg, rgba(251,248,243,.82), rgba(251,248,243,.58));
+  background: transparent;
   border-top: 1px solid rgba(230,221,209,.85);
   border-bottom: 1px solid rgba(230,221,209,.85);
 }
@@ -487,7 +503,7 @@ svg{ width: 22px; height: 22px; }
   margin-top: 14px;
 }
 
-/* ✅ SPACE SECTION */
+/* SPACE SECTION */
 .space-grid{
   display:grid;
   gap: 14px;
@@ -681,7 +697,7 @@ svg{ width: 22px; height: 22px; }
   padding: 18px;
 }
 
-/* ✅ Contact cover image */
+/* Contact cover image */
 .contact-cover{
   border-radius: 20px;
   overflow: hidden;
@@ -806,7 +822,9 @@ svg{ width: 22px; height: 22px; }
   margin-top: var(--space-6);
   padding: 26px 0;
   border-top: 1px solid rgba(230,221,209,.85);
-  background: rgba(251,248,243,.68);
+
+  /* ✅ CHANGE #1: keep background continuous */
+  background: transparent;
 }
 .footer-inner{
   display:flex;
