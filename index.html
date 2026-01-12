@@ -69,11 +69,13 @@
             με στόχο ουσιαστική αλλαγή στην καθημερινότητα.
           </p>
 
+          <!-- CTA immediately visible -->
           <div class="hero-cta">
             <a class="btn btn--primary" href="#contact">Προγραμματισμός συνεδρίας</a>
             <a class="btn btn--ghost" href="#help">Δείτε πώς βοηθάω</a>
           </div>
 
+          <!-- Trust bits (no testimonials) -->
           <div class="trust-row" role="list" aria-label="Σύντομα στοιχεία εμπιστοσύνης">
             <div class="trust" role="listitem">
               <span class="dot" aria-hidden="true"></span>
@@ -90,8 +92,11 @@
           </div>
         </div>
 
+        <!-- Right side: Visual + (optional) Office photo slot -->
         <div class="hero-visual" aria-label="Οπτικό πλαίσιο">
           <div class="office-photo" aria-label="Φωτογραφία γραφείου">
+            <!-- Αν δεν έχεις ακόμα εικόνα, άφησε το img σχολιασμένο -->
+            <!-- <img src="assets/office-main.jpg" alt="Ο χώρος του γραφείου" loading="lazy"> -->
             <img src="assets/office-main.jpg" alt="Ο χώρος του γραφείου" loading="lazy">
           </div>
 
@@ -176,7 +181,7 @@
       </div>
     </section>
 
-    <!-- SPACE -->
+    <!-- ✅ NEW: SPACE / OFFICE IMAGES -->
     <section class="section" id="space" aria-label="Ο χώρος">
       <div class="container">
         <div class="section-head">
@@ -217,7 +222,7 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- SECTION 2: SERVICES -->
     <section class="section" id="services" aria-label="Υπηρεσίες">
       <div class="container">
         <div class="section-head">
@@ -291,7 +296,7 @@
       </div>
     </section>
 
-    <!-- PROCESS -->
+    <!-- SECTION 3: PROCESS -->
     <section class="section section--soft" id="process" aria-label="Πώς δουλεύουμε">
       <div class="container">
         <div class="section-head">
@@ -337,7 +342,7 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- SECTION 5: FAQ -->
     <section class="section section--soft" id="faq" aria-label="Συχνές ερωτήσεις">
       <div class="container">
         <div class="section-head">
@@ -381,7 +386,7 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- SECTION 6: CONTACT (with form) -->
     <section class="section" id="contact" aria-label="Τοποθεσία και επικοινωνία">
       <div class="container">
         <div class="section-head">
@@ -391,6 +396,7 @@
 
         <div class="contact-grid">
           <div class="contact-card">
+            <!-- ✅ NEW: contact cover image -->
             <div class="contact-cover" aria-label="Εικόνα χώρου">
               <img src="assets/office-contact.jpg" alt="Μια ήρεμη γωνία του χώρου" loading="lazy">
             </div>
@@ -459,7 +465,7 @@
       </div>
     </section>
 
-    <!-- FINAL CTA -->
+    <!-- SECTION 7: FINAL CTA -->
     <section class="section cta" aria-label="Τελικό κάλεσμα">
       <div class="container cta-inner">
         <div class="cta-copy">
@@ -519,65 +525,20 @@
       expanded ? closeMenu() : openMenu();
     });
 
+    // close when clicking outside inner
     mobileNav.addEventListener("click", (e) => {
       if(e.target === mobileNav) closeMenu();
     });
 
+    // close when clicking a link
     mobileNav.querySelectorAll("a").forEach(a => {
       a.addEventListener("click", closeMenu);
     });
 
+    // close on ESC
     window.addEventListener("keydown", (e) => {
       if(e.key === "Escape") closeMenu();
     });
-
-    // ✅ Smooth scroll with small delay (controlled duration)
-    (function(){
-      const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
-      const header = document.querySelector(".site-header");
-      const headerOffset = () => (header ? header.getBoundingClientRect().height : 0);
-
-      function easeInOutCubic(t){
-        return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3)/2;
-      }
-
-      function smoothScrollTo(targetY, duration){
-        const startY = window.pageYOffset;
-        const diff = targetY - startY;
-        const start = performance.now();
-
-        function step(now){
-          const t = Math.min(1, (now - start) / duration);
-          const eased = easeInOutCubic(t);
-          window.scrollTo(0, startY + diff * eased);
-          if (t < 1) requestAnimationFrame(step);
-        }
-        requestAnimationFrame(step);
-      }
-
-      document.addEventListener("click", (e) => {
-        const a = e.target.closest('a[href^="#"]');
-        if (!a) return;
-
-        const href = a.getAttribute("href");
-        if (!href || href === "#" ) return;
-
-        const id = href.slice(1);
-        const target = document.getElementById(id);
-        if (!target) return;
-
-        // allow skip-link default if user wants instant? (still smooth)
-        e.preventDefault();
-
-        const rect = target.getBoundingClientRect();
-        const targetY = window.pageYOffset + rect.top - headerOffset() - 10;
-
-        // tiny "delay" feel via duration (ms)
-        smoothScrollTo(targetY, 520);
-      }, { passive: false });
-    })();
   </script>
 </body>
 </html>
