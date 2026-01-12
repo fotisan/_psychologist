@@ -240,17 +240,17 @@ svg{ width: 22px; height: 22px; }
 }
 .lead{
   font-size: var(--lead);
-  color: rgba(31,29,26,.84); /* improved contrast */
+  color: rgba(31,29,26,.84);
   margin: 0 0 var(--space-4);
 }
 .sub{
   margin: 0;
-  color: rgba(31,29,26,.78); /* improved contrast */
+  color: rgba(31,29,26,.78);
   font-size: 16px;
 }
 .p{
   margin: 0;
-  color: rgba(31,29,26,.78); /* improved contrast */
+  color: rgba(31,29,26,.78);
   font-size: 15px;
 }
 .eyebrow{
@@ -571,8 +571,8 @@ svg{ width: 22px; height: 22px; }
   color: rgba(31,29,26,.90);
 }
 
-/* Two-column panels */
-.two-col{
+/* Proof */
+.proof-grid{
   display:grid;
   gap: 14px;
 }
@@ -604,26 +604,6 @@ svg{ width: 22px; height: 22px; }
   font-size: 12px;
 }
 
-.badges{
-  margin-top: 16px;
-  display:flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.chip{
-  font-size: 12px;
-  padding: 9px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(222,211,196,.95);
-  background: rgba(255,255,255,.76);
-  color: rgba(31,29,26,.80);
-}
-
-/* Proof */
-.proof-grid{
-  display:grid;
-  gap: 14px;
-}
 .logos{
   display:flex;
   flex-wrap: wrap;
@@ -868,10 +848,6 @@ svg{ width: 22px; height: 22px; }
   }
   .cards-grid{
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-  .two-col{
-    grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
   .faq-grid{
