@@ -458,6 +458,28 @@ svg{ width: 22px; height: 22px; }
   font-size: 13px;
 }
 
+.hero-photo{
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(222,211,196,.95);
+  background: rgba(255,255,255,.65);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hero-photo img{
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 860px){
+  .hero-photo img{
+    height: 420px;
+  }
+}
+
+
 /* Cards */
 .cards-grid{ display:grid; gap: 14px; }
 .card{
