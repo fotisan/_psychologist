@@ -389,7 +389,12 @@ svg{ width: 22px; height: 22px; }
   gap: 14px;
 }
 
-/* ✅ κρατάει χώρο + σωστό aspect ratio */
+/* HERO IMAGE — controlled size */
+.hero-visual{
+  display: grid;
+  gap: 14px;
+}
+
 .hero-photo{
   border-radius: var(--radius-lg);
   border: 1px solid rgba(222,211,196,.95);
@@ -397,8 +402,8 @@ svg{ width: 22px; height: 22px; }
   box-shadow: var(--shadow);
   overflow: hidden;
 
-  aspect-ratio: 4 / 3;     /* κρατάει ωραία αναλογία */
-  min-height: 240px;       /* fallback αν κάτι πάει στραβά */
+  height: 260px;        /* ✅ ΣΤΑΘΕΡΟ, ΟΧΙ AUTO */
+  max-height: 260px;   /* κόφτης */
 }
 
 .hero-photo img{
@@ -407,6 +412,19 @@ svg{ width: 22px; height: 22px; }
   object-fit: cover;
   display: block;
 }
+
+/* Desktop refinement */
+@media (min-width: 860px){
+  .hero-photo{
+    height: 300px;
+    max-height: 300px;
+  }
+}
+
+.hero-photo{
+  align-self: start; /* ⬅️ ΔΕΝ τεντώνεται κάθετα */
+}
+
 
 @media (min-width: 860px){
   .hero-photo{
