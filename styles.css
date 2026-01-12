@@ -44,9 +44,7 @@
 
 *{ box-sizing: border-box; }
 html, body{ height: 100%; }
-/* ✅ change #2: remove CSS smooth to avoid double-smoothing with JS */
-html{ scroll-behavior: auto; }
-
+html{ scroll-behavior: smooth; }
 body{
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
@@ -209,12 +207,10 @@ svg{ width: 22px; height: 22px; }
 .section{
   padding: var(--space-m) 0;
 }
-
-/* ✅ change #1: make backgrounds uniform by removing section soft backgrounds/borders */
 .section--soft{
-  background: transparent;
-  border-top: 0;
-  border-bottom: 0;
+  background: linear-gradient(180deg, rgba(251,248,243,.82), rgba(251,248,243,.58));
+  border-top: 1px solid rgba(230,221,209,.85);
+  border-bottom: 1px solid rgba(230,221,209,.85);
 }
 
 .section-head{
@@ -359,11 +355,13 @@ svg{ width: 22px; height: 22px; }
   background: rgba(127,174,160,.65);
 }
 
+/* Right visual wrapper */
 .hero-visual{
   display:grid;
   gap: 14px;
 }
 
+/* Office image */
 .office-photo{
   border-radius: var(--radius-lg);
   border: 1px solid rgba(222,211,196,.95);
@@ -382,6 +380,7 @@ svg{ width: 22px; height: 22px; }
   display:block;
 }
 
+/* Visual card */
 .visual-card{
   position: relative;
   background:
@@ -488,7 +487,7 @@ svg{ width: 22px; height: 22px; }
   margin-top: 14px;
 }
 
-/* SPACE SECTION */
+/* ✅ SPACE SECTION */
 .space-grid{
   display:grid;
   gap: 14px;
@@ -682,6 +681,7 @@ svg{ width: 22px; height: 22px; }
   padding: 18px;
 }
 
+/* ✅ Contact cover image */
 .contact-cover{
   border-radius: 20px;
   overflow: hidden;
@@ -806,8 +806,7 @@ svg{ width: 22px; height: 22px; }
   margin-top: var(--space-6);
   padding: 26px 0;
   border-top: 1px solid rgba(230,221,209,.85);
-  /* ✅ change #1: remove footer background so it matches body */
-  background: transparent;
+  background: rgba(251,248,243,.68);
 }
 .footer-inner{
   display:flex;
@@ -876,6 +875,7 @@ svg{ width: 22px; height: 22px; }
     gap: 16px;
   }
 
+  /* Space section desktop */
   .space-grid{
     grid-template-columns: 1.15fr .85fr;
     gap: 16px;
@@ -893,5 +893,5 @@ svg{ width: 22px; height: 22px; }
 }
 
 @media (prefers-reduced-motion: reduce){
-  *{ transition: none !important; }
+  *{ scroll-behavior: auto !important; transition: none !important; }
 }
