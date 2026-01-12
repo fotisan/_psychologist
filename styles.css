@@ -1,22 +1,20 @@
 /* styles.css */
-/* Palette inspired by her IG: warm sand / beige / soft sky / muted sage */
 :root{
-  --bg: #f6f1ea;        /* warm paper */
-  --bg-2:#f1ebe3;       /* slightly deeper */
-  --surface:#ffffff;    /* cards */
-  --surface-2:#fbf8f3;  /* soft section */
+  --bg: #f6f1ea;
+  --bg-2:#f1ebe3;
+  --surface:#ffffff;
+  --surface-2:#fbf8f3;
 
-  /* Contrast improved */
-  --ink:#1f1d1a;        /* near-black */
-  --muted:#4b4339;      /* darker warm gray (better contrast) */
-  --faint:#6a6157;      /* slightly darker */
+  --ink:#1f1d1a;
+  --muted:#4b4339;
+  --faint:#6a6157;
 
   --line:#e6ddd1;
   --line-2:#ded3c4;
 
-  --accent:#c8a57b;     /* sand */
-  --accent-2:#7faea0;   /* muted sage */
-  --accent-3:#e6c1b1;   /* soft peach */
+  --accent:#c8a57b;
+  --accent-2:#7faea0;
+  --accent-3:#e6c1b1;
 
   --radius-lg: 26px;
   --radius-md: 18px;
@@ -40,7 +38,6 @@
   --space-6: 48px;
   --space-7: 72px;
 
-  /* Mobile spacing tightened */
   --space-m-hero: 44px;
   --space-m: 54px;
 }
@@ -208,7 +205,7 @@ svg{ width: 22px; height: 22px; }
 
 /* Sections */
 .section{
-  padding: var(--space-m) 0; /* tightened for mobile by default */
+  padding: var(--space-m) 0;
 }
 .section--soft{
   background: linear-gradient(180deg, rgba(251,248,243,.82), rgba(251,248,243,.58));
@@ -353,6 +350,10 @@ svg{ width: 22px; height: 22px; }
   background: rgba(200,165,123,.95);
   box-shadow: 0 0 0 6px rgba(200,165,123,.16);
 }
+.dot--soft{
+  box-shadow: 0 0 0 6px rgba(127,174,160,.12);
+  background: rgba(127,174,160,.65);
+}
 
 /* Right visual wrapper */
 .hero-visual{
@@ -360,30 +361,17 @@ svg{ width: 22px; height: 22px; }
   gap: 14px;
 }
 
-/* Office image slot (EMPTY by default) */
+/* Office image */
 .office-photo{
   border-radius: var(--radius-lg);
-  border: 1px dashed rgba(200,165,123,.45);
+  border: 1px solid rgba(222,211,196,.95);
   background:
     radial-gradient(900px 260px at 20% 0%, rgba(230,193,177,.20), transparent 55%),
     radial-gradient(700px 260px at 90% 90%, rgba(127,174,160,.16), transparent 60%),
     linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.48));
   box-shadow: var(--shadow-soft);
-  min-height: 210px;
+  min-height: 230px;
   overflow:hidden;
-  position: relative;
-}
-.office-photo::after{
-  content:"Εδώ μπορεί να μπει φωτογραφία γραφείου";
-  position:absolute;
-  inset: 0;
-  display:grid;
-  place-items:center;
-  text-align:center;
-  padding: 18px;
-  color: rgba(31,29,26,.52);
-  font-weight: 700;
-  letter-spacing: .1px;
 }
 .office-photo img{
   width: 100%;
@@ -391,7 +379,6 @@ svg{ width: 22px; height: 22px; }
   object-fit: cover;
   display:block;
 }
-.office-photo:has(img)::after{ content:""; }
 
 /* Visual card */
 .visual-card{
@@ -494,6 +481,65 @@ svg{ width: 22px; height: 22px; }
 }
 .help-list li{ margin: 6px 0; }
 .mini-cta{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* ✅ SPACE SECTION */
+.space-grid{
+  display:grid;
+  gap: 14px;
+}
+.space-main,
+.space-tile{
+  margin: 0;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(222,211,196,.95);
+  background: rgba(255,255,255,.70);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+.space-main img,
+.space-tile img{
+  width: 100%;
+  height: 100%;
+  display:block;
+  object-fit: cover;
+}
+.space-main{
+  min-height: 280px;
+}
+.space-side{
+  display:grid;
+  gap: 14px;
+}
+.space-tile{
+  min-height: 160px;
+}
+.space-notes{
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(222,211,196,.95);
+  background: rgba(255,255,255,.70);
+  box-shadow: var(--shadow-soft);
+  padding: 16px;
+}
+.space-bullets{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display:grid;
+  gap: 10px;
+  color: rgba(31,29,26,.80);
+  font-size: 14px;
+}
+.space-bullets li{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.space-cta{
   display:flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -634,6 +680,24 @@ svg{ width: 22px; height: 22px; }
 .contact-card{
   padding: 18px;
 }
+
+/* ✅ Contact cover image */
+.contact-cover{
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(222,211,196,.95);
+  background: rgba(255,255,255,.60);
+  box-shadow: 0 14px 34px rgba(31,29,26,.08);
+  margin-bottom: 14px;
+  height: 180px;
+}
+.contact-cover img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+}
+
 .contact-item{
   display:grid;
   gap: 6px;
@@ -771,7 +835,7 @@ svg{ width: 22px; height: 22px; }
   .mobile-nav{ display:none; }
 
   .section{
-    padding: var(--space-7) 0; /* bigger on desktop */
+    padding: var(--space-7) 0;
   }
 
   .hero{
@@ -809,6 +873,22 @@ svg{ width: 22px; height: 22px; }
   .help-grid{
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+  }
+
+  /* Space section desktop */
+  .space-grid{
+    grid-template-columns: 1.15fr .85fr;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .space-main{
+    min-height: 420px;
+  }
+  .space-tile{
+    min-height: 190px;
+  }
+  .contact-cover{
+    height: 210px;
   }
 }
 
