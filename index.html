@@ -17,7 +17,12 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Αρχική">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <!-- ✅ CHANGE #3: Brand logo as image (circular) -->
+        <span class="brand-mark" aria-hidden="true">
+          <!-- άλλαξε το path στο δικό σου αρχείο -->
+          <img src="assets/logo.png" alt="" loading="lazy">
+        </span>
+
         <span class="brand-text">
           <span class="brand-name">Νικολέτα Πλατή</span>
           <span class="brand-sub">Ψυχολόγος • Ρόδος</span>
@@ -95,8 +100,6 @@
         <!-- Right side: Visual + (optional) Office photo slot -->
         <div class="hero-visual" aria-label="Οπτικό πλαίσιο">
           <div class="office-photo" aria-label="Φωτογραφία γραφείου">
-            <!-- Αν δεν έχεις ακόμα εικόνα, άφησε το img σχολιασμένο -->
-            <!-- <img src="assets/office-main.jpg" alt="Ο χώρος του γραφείου" loading="lazy"> -->
             <img src="assets/office-main.jpg" alt="Ο χώρος του γραφείου" loading="lazy">
           </div>
 
@@ -181,7 +184,7 @@
       </div>
     </section>
 
-    <!-- ✅ NEW: SPACE / OFFICE IMAGES -->
+    <!-- SPACE / OFFICE IMAGES -->
     <section class="section" id="space" aria-label="Ο χώρος">
       <div class="container">
         <div class="section-head">
@@ -396,7 +399,6 @@
 
         <div class="contact-grid">
           <div class="contact-card">
-            <!-- ✅ NEW: contact cover image -->
             <div class="contact-cover" aria-label="Εικόνα χώρου">
               <img src="assets/office-contact.jpg" alt="Μια ήρεμη γωνία του χώρου" loading="lazy">
             </div>
@@ -539,6 +541,35 @@
     window.addEventListener("keydown", (e) => {
       if(e.key === "Escape") closeMenu();
     });
+
+    // ✅ CHANGE #2: Tiny delay on anchor scroll (subtle)
+    (function(){
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (prefersReduced) return;
+
+      const DELAY_MS = 70; // "πολύ μικρή" καθυστέρηση
+      const selector = 'a[href^="#"]:not([href="#"])';
+
+      document.querySelectorAll(selector).forEach(a => {
+        a.addEventListener("click", (e) => {
+          const href = a.getAttribute("href");
+          if (!href || href.length < 2) return;
+
+          const id = href.slice(1);
+          const target = document.getElementById(id);
+          if (!target) return;
+
+          e.preventDefault();
+
+          // update URL without instant jump
+          history.pushState(null, "", href);
+
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, DELAY_MS);
+        });
+      });
+    })();
   </script>
 </body>
 </html>
