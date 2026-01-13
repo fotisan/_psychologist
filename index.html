@@ -1,28 +1,27 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="el">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ψυχολόγος στη Ρόδο — Συμβουλευτική • Παιγνιοθεραπεία • ABA</title>
-  <meta name="description" content="Ψυχολογική υποστήριξη στη Ρόδο. Συμβουλευτική, Παιγνιοθεραπεία και Θεραπεία Συμπεριφοράς (ABA). Κλείστε ραντεβού." />
+  <title>Ψυχολόγος στη Ρόδο — Νικολέτα Πλατή</title>
+  <meta name="description" content="Ψυχολογική υποστήριξη στη Ρόδο. Συμβουλευτική ενηλίκων, παιγνιοθεραπεία και ABA. Κλείστε ραντεβού." />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=1003" />
+  <link rel="stylesheet" href="styles.css?v=1100" />
 </head>
 
 <body id="top">
   <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
 
-  <!-- Header / Nav -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Αρχική">
         <span class="brand-mark" aria-hidden="true">
+          <!-- Βάλε εδώ το δικό σου logo image -->
           <img src="assets/logo.png" alt="" loading="lazy">
         </span>
 
@@ -33,13 +32,11 @@
         </span>
       </a>
 
-      <!-- Mobile toggle -->
       <button class="nav-toggle" type="button" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="siteNav">
         <span class="nav-toggle-line"></span>
         <span class="nav-toggle-line"></span>
       </button>
 
-      <!-- Desktop nav -->
       <nav class="nav" aria-label="Κύρια πλοήγηση">
         <a href="#services">Υπηρεσίες</a>
         <a href="#help">Πώς βοηθάω</a>
@@ -50,7 +47,7 @@
       </nav>
     </div>
 
-    <!-- Mobile nav panel -->
+    <!-- Mobile overlay -->
     <div class="mobile-nav" id="siteNav" aria-hidden="true">
       <div class="mobile-nav-inner">
         <a href="#top">Αρχική</a>
@@ -69,10 +66,14 @@
     <!-- HERO -->
     <section class="section hero fade-in-section" aria-label="Hero">
       <div class="container hero-grid">
+
         <div class="hero-copy">
           <p class="eyebrow">Ψυχολογική υποστήριξη στη Ρόδο</p>
           <h1 class="h1">Ασφαλής χώρος για ζωή, φροντίδα και επανεκκίνηση.</h1>
-          <p class="lead">Συμβουλευτική ενηλίκων, παιγνιοθεραπεία και θεραπεία συμπεριφοράς (ABA). Μεθοδικά, ανθρώπινα, χωρίς υπερβολές.</p>
+          <p class="lead">
+            Συμβουλευτική ενηλίκων, παιγνιοθεραπεία και θεραπεία συμπεριφοράς (ABA).
+            Μεθοδικά, ανθρώπινα, χωρίς υπερβολές.
+          </p>
 
           <div class="hero-cta">
             <a class="btn btn--primary" href="#contact">Προγραμματισμός συνεδρίας</a>
@@ -86,47 +87,29 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Οπτικό πλαίσιο">
-  <div class="office-photo hero-photo" aria-label="Φωτογραφία">
-    <img src="./assets/office-main.jpg" alt="Νικολέτα Πλατή, Ψυχολόγος" loading="eager">
-  </div>
+        <!-- ✅ Διορθωμένο “δεξιά”: photo + card (ίδιο πλάτος, σωστό μέγεθος) -->
+        <div class="hero-visual">
+          <div class="hero-photo">
+            <!-- άλλαξε το όνομα αν έχεις άλλο αρχείο -->
+            <img src="assets/office-main.jpg" alt="Χώρος συνεδρίας" loading="eager">
+          </div>
 
-  <div class="visual-card" aria-hidden="true">
-    ...
-  </div>
-</div>
+          <div class="visual-card">
+            <div class="visual-card-top">
+              <span class="pill">Συνεδρίες δια ζώσης</span>
+              <span class="pill">Online όπου χρειάζεται</span>
+            </div>
 
-
-  <div class="visual-card">
-    <div class="visual-card-top">
-      <span class="pill">Συνεδρίες δια ζώσης</span>
-      <span class="pill">Online όπου χρειάζεται</span>
-    </div>
-
-    <div class="visual-card-mid">
-      <div class="metric">
-        <span class="metric-label">Διάρκεια</span>
-        <span class="metric-value">50′</span>
-      </div>
-      <div class="metric">
-        <span class="metric-label">Ραντεβού</span>
-        <span class="metric-value">1–2 / εβδομάδα</span>
-      </div>
-    </div>
-
-    <div class="visual-card-bottom">
-      <div class="badge">
-        <span class="badge-icon" aria-hidden="true">✓</span>
-        <span class="badge-text">Καθαρή καθοδήγηση, βήμα-βήμα.</span>
-      </div>
-      <div class="badge">
-        <span class="badge-icon" aria-hidden="true">✓</span>
-        <span class="badge-text">Χωρίς “θεατρικές” υποσχέσεις.</span>
-      </div>
-    </div>
-  </div>
-</div>
-
+            <div class="visual-card-mid">
+              <div class="metric">
+                <span class="metric-label">Διάρκεια</span>
+                <span class="metric-value">50′</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Ραντεβού</span>
+                <span class="metric-value">1–2 / εβδομάδα</span>
+              </div>
+            </div>
 
             <div class="visual-card-bottom">
               <div class="badge">
@@ -140,6 +123,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -155,7 +139,8 @@
 
           <article class="card fade-in-section">
             <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <!-- chat bubble -->
+              <svg viewBox="0 0 24 24" fill="none">
                 <path d="M8 18l-3 3v-4a7 7 0 01-1-4c0-4.1 3.6-7 8-7s8 2.9 8 7-3.6 7-8 7H8z"
                       stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                 <path d="M8.5 11h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -173,7 +158,8 @@
 
           <article class="card fade-in-section">
             <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <!-- puzzle / play -->
+              <svg viewBox="0 0 24 24" fill="none">
                 <path d="M14 4h2a2 2 0 012 2v2a2 2 0 00-2 2 2 2 0 002 2v2a2 2 0 01-2 2h-2"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M10 20H8a2 2 0 01-2-2v-2a2 2 0 002-2 2 2 0 00-2-2V8a2 2 0 012-2h2"
@@ -195,14 +181,11 @@
 
           <article class="card fade-in-section">
             <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 21a9 9 0 110-18 9 9 0 010 18z"
-                      stroke="currentColor" stroke-width="2"/>
-                <path d="M12 17a5 5 0 110-10 5 5 0 010 10z"
-                      stroke="currentColor" stroke-width="2"/>
-                <path d="M12 13a1 1 0 110-2 1 1 0 010 2z"
-                      fill="currentColor"/>
-                <path d="M19 5l-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <!-- target -->
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 21a9 9 0 110-18 9 9 0 010 18z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 17a5 5 0 110-10 5 5 0 010 10z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 12l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 <path d="M16 5h3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
@@ -249,10 +232,19 @@
         </div>
 
         <div class="space-grid">
-          <figure class="space-main"><img src="assets/space-1.jpg" alt="Χώρος συνεδρίας" loading="lazy"></figure>
+          <figure class="space-main">
+            <img src="assets/space-1.jpg" alt="Χώρος συνεδρίας" loading="lazy">
+          </figure>
+
           <div class="space-side">
-            <figure class="space-tile"><img src="assets/space-2.jpg" alt="Λεπτομέρεια χώρου" loading="lazy"></figure>
-            <figure class="space-tile"><img src="assets/space-3.jpg" alt="Γωνιά αναμονής" loading="lazy"></figure>
+            <figure class="space-tile">
+              <img src="assets/space-2.jpg" alt="Λεπτομέρεια χώρου" loading="lazy">
+            </figure>
+
+            <figure class="space-tile">
+              <img src="assets/space-3.jpg" alt="Γωνιά αναμονής" loading="lazy">
+            </figure>
+
             <div class="space-notes">
               <ul class="space-bullets">
                 <li><span class="dot" aria-hidden="true"></span> Διακριτική είσοδος</li>
@@ -276,14 +268,34 @@
         </div>
 
         <div class="steps">
-          <div class="step"><div class="step-num">1</div><div><h3 class="h3">Σύντομη γνωριμία</h3><p class="p">Καταγράφουμε το αίτημα και στόχους.</p></div></div>
-          <div class="step"><div class="step-num">2</div><div><h3 class="h3">Πλάνο συνεδριών</h3><p class="p">Συχνότητα, διάρκεια και προτεραιότητες.</p></div></div>
-          <div class="step"><div class="step-num">3</div><div><h3 class="h3">Πρόοδος</h3><p class="p">Αξιολόγηση και προσαρμογή.</p></div></div>
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h3 class="h3">Σύντομη γνωριμία</h3>
+              <p class="p">Καταγράφουμε το αίτημα και στόχους.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h3 class="h3">Πλάνο συνεδριών</h3>
+              <p class="p">Συχνότητα, διάρκεια και προτεραιότητες.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h3 class="h3">Πρόοδος</h3>
+              <p class="p">Αξιολόγηση και προσαρμογή.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- FAQ (✅ +2 πεδία) -->
     <section class="section section--soft fade-in-section" id="faq" aria-label="Συχνές ερωτήσεις">
       <div class="container">
         <div class="section-head">
@@ -304,12 +316,23 @@
 
           <details class="faq">
             <summary>Πόσες συνεδρίες θα χρειαστώ;</summary>
-            <div class="faq-body"><p class="p">Εξαρτάται από το αίτημα και τους στόχους. Συνήθως το ξεκαθαρίζουμε στις πρώτες συνεδρίες και το επαναξιολογούμε στην πορεία.</p></div>
+            <div class="faq-body"><p class="p">Εξαρτάται από το αίτημα και τους στόχους. Το ξεκαθαρίζουμε στις πρώτες συνεδρίες και το επαναξιολογούμε στην πορεία.</p></div>
           </details>
 
           <details class="faq">
             <summary>Τι γίνεται αν χρειαστεί να ακυρώσω;</summary>
-            <div class="faq-body"><p class="p">Αν υπάρξει ανάγκη, ενημερώνετε όσο πιο έγκαιρα γίνεται ώστε να βρούμε άλλη διαθέσιμη ώρα.</p></div>
+            <div class="faq-body"><p class="p">Ιδανικά ενημερώνετε όσο πιο έγκαιρα γίνεται ώστε να βρούμε άλλη διαθέσιμη ώρα.</p></div>
+          </details>
+
+          <!-- ✅ 2 extra -->
+          <details class="faq">
+            <summary>Είναι “φυσιολογικό” να νιώθω άγχος πριν την πρώτη συνεδρία;</summary>
+            <div class="faq-body"><p class="p">Ναι. Είναι πολύ συνηθισμένο. Η πρώτη συνεδρία είναι κυρίως γνωριμία και ξεκαθάρισμα του πλαισίου.</p></div>
+          </details>
+
+          <details class="faq">
+            <summary>Τι γίνεται με την εμπιστευτικότητα;</summary>
+            <div class="faq-body"><p class="p">Η εμπιστευτικότητα είναι βασικός κανόνας. Συζητάμε από την αρχή τι ισχύει και σε ποιες σπάνιες περιπτώσεις υπάρχουν εξαιρέσεις.</p></div>
           </details>
         </div>
       </div>
@@ -345,10 +368,12 @@
                 <label class="field-label" for="name">Ονοματεπώνυμο</label>
                 <input class="input" id="name" name="name" autocomplete="name" required>
               </div>
+
               <div class="field">
                 <label class="field-label" for="msg">Μήνυμα</label>
                 <textarea class="textarea" id="msg" name="message" required></textarea>
               </div>
+
               <div class="form-actions">
                 <button class="btn btn--primary" type="submit">Αποστολή</button>
                 <a class="btn btn--outline" href="#services">Υπηρεσίες</a>
@@ -357,22 +382,27 @@
           </div>
 
           <div class="map-card" aria-label="Χάρτης">
-            <iframe title="Χάρτης" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Rhodes&output=embed"></iframe>
+            <iframe
+              title="Χάρτης"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Rhodes&output=embed">
+            </iframe>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer (χωρίς “πάνω”) -->
     <footer class="footer">
       <div class="container footer-inner">
         <p class="fine">© <span id="year"></span> Νικολέτα Πλατή</p>
       </div>
     </footer>
+
   </main>
 
-  <!-- Back to top -->
+  <!-- ✅ Back to top button -->
   <button class="to-top" type="button" aria-label="Πάνω" title="Πάνω">
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M12 5l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -416,7 +446,7 @@
     mobileNav.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
     window.addEventListener("keydown", (e) => { if(e.key === "Escape") closeMenu(); });
 
-    // tiny delay on anchor scroll (subtle)
+    // small delay on anchor scroll (subtle)
     (function(){
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (prefersReduced) return;
@@ -443,14 +473,13 @@
       });
     })();
 
-    // Back to top button behavior
+    // back to top
     (function(){
       const btn = document.querySelector(".to-top");
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
       function onScroll(){
-        const show = window.scrollY > 420;
-        btn.classList.toggle("is-visible", show);
+        btn.classList.toggle("is-visible", window.scrollY > 420);
       }
 
       window.addEventListener("scroll", onScroll, { passive: true });
@@ -461,7 +490,7 @@
       });
     })();
 
-    // ✅ header glass only after scroll
+    // header glass only after scroll
     (function(){
       const header = document.querySelector(".site-header");
       const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 10);
@@ -469,7 +498,7 @@
       onScroll();
     })();
 
-    // ✅ Reveal on scroll (fade-in-section)
+    // reveal on scroll (fade-in)
     (function(){
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (prefersReduced) return;
