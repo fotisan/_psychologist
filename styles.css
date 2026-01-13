@@ -1,3 +1,4 @@
+/* styles.css */
 :root{
   --bg: #f6f1ea;
   --bg-2:#f1ebe3;
@@ -73,6 +74,40 @@ svg{ width: 22px; height: 22px; }
 
 .no-scroll{ overflow: hidden; }
 
+/* Top helper bar */
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(255,255,255,.65);
+  border-bottom: 1px solid rgba(222,211,196,.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.topbar-inner{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+}
+.topbar-text{
+  font-size: 13px;
+  color: rgba(31,29,26,.78);
+}
+.topbar-link{
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(200,165,123,.18);
+  border: 1px solid rgba(200,165,123,.35);
+}
+.topbar-link:hover{
+  background: rgba(200,165,123,.26);
+}
+
 .skip-link{
   position: absolute;
   left: -999px;
@@ -85,18 +120,15 @@ svg{ width: 22px; height: 22px; }
 }
 .skip-link:focus{ left: 12px; }
 
-/* -------------------------------------------
-   Header (glass only after scroll)
-------------------------------------------- */
+/* Header */
 .site-header{
   position: sticky;
-  top: 0;
+  top: 44px; /* αφήνει χώρο για topbar */
   z-index: 50;
   background: rgba(246,241,234,.55);
   border-bottom: 1px solid rgba(230,221,209,.85);
   transition: background .2s ease, backdrop-filter .2s ease;
 }
-
 .site-header.is-scrolled{
   background: rgba(249, 247, 242, 0.8);
   backdrop-filter: blur(10px);
@@ -119,7 +151,6 @@ svg{ width: 22px; height: 22px; }
   text-decoration: none;
   min-width: 220px;
 }
-
 .brand-mark{
   width: 34px;
   height: 34px;
@@ -140,8 +171,6 @@ svg{ width: 22px; height: 22px; }
   object-fit: cover;
   display:block;
 }
-
-/* ✅ no frame */
 .brand-text{
   display:flex;
   flex-direction: column;
@@ -150,7 +179,6 @@ svg{ width: 22px; height: 22px; }
   border: 0;
   background: transparent;
 }
-
 .brand-name{
   font-family: var(--font-serif);
   font-weight: 700;
@@ -344,14 +372,12 @@ svg{ width: 22px; height: 22px; }
 
 /* HERO */
 .hero{ padding-top: var(--space-m-hero); }
-
 .hero-grid{
   display:grid;
   gap: var(--space-6);
   align-items:start;
 }
-
-.hero-copy{ max-width: 640px; }
+.hero-copy{ max-width: 680px; }
 
 .hero-cta{
   display:flex;
@@ -385,15 +411,35 @@ svg{ width: 22px; height: 22px; }
   background: rgba(127,174,160,.65);
 }
 
-/* ✅ Hero right module: fixed width + nice ratio */
+/* Hero “Για εσάς αν…” */
+.hero-mini{ margin-top: 16px; }
+.hero-mini-card{
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(222,211,196,.95);
+  background: rgba(255,255,255,.72);
+  box-shadow: var(--shadow-soft);
+  padding: 16px;
+}
+.hero-mini-card strong{
+  display:block;
+  margin-bottom: 10px;
+  color: rgba(31,29,26,.92);
+}
+.hero-mini-card ul{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(31,29,26,.78);
+  font-size: 14px;
+}
+.hero-mini-card li{ margin: 6px 0; }
+
+/* Hero right module */
 .hero-visual{
   justify-self: end;
   width: min(540px, 100%);
   display:grid;
   gap: 14px;
 }
-
-/* ✅ photo size tuned to match the card (NOT huge) */
 .hero-photo{
   height: 220px;
   border-radius: var(--radius-lg);
@@ -421,7 +467,6 @@ svg{ width: 22px; height: 22px; }
   padding: 18px;
   overflow: hidden;
 }
-
 .visual-card-top{ display:flex; flex-wrap: wrap; gap: 10px; }
 .pill{
   font-size: 12px;
@@ -431,7 +476,6 @@ svg{ width: 22px; height: 22px; }
   padding: 8px 10px;
   border-radius: 999px;
 }
-
 .visual-card-mid{
   display:grid;
   grid-template-columns: 1fr;
@@ -455,7 +499,6 @@ svg{ width: 22px; height: 22px; }
   letter-spacing: .1px;
   color: rgba(31,29,26,.92);
 }
-
 .visual-card-bottom{ display:grid; gap: 10px; }
 .badge{
   display:flex;
@@ -485,6 +528,8 @@ svg{ width: 22px; height: 22px; }
 
 /* Cards */
 .cards-grid{ display:grid; gap: 14px; }
+.cards-grid--two{ display:grid; gap: 14px; }
+
 .card{
   background: rgba(255,255,255,.84);
   border: 1px solid rgba(222,211,196,.95);
@@ -515,7 +560,7 @@ svg{ width: 22px; height: 22px; }
 }
 .mini-list li{ margin: 6px 0; }
 
-/* Services — expensive cards */
+/* Services hover */
 #services .card{
   position: relative;
   overflow: hidden;
@@ -558,6 +603,19 @@ svg{ width: 22px; height: 22px; }
   padding: 18px;
 }
 
+/* Note card */
+.note-card{
+  margin-top: 16px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(222,211,196,.95);
+  background: rgba(255,255,255,.68);
+  box-shadow: var(--shadow-soft);
+  padding: 16px;
+  color: rgba(31,29,26,.78);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 /* Space */
 .space-grid{ display:grid; gap: 14px; }
 .space-main, .space-tile{
@@ -582,30 +640,6 @@ svg{ width: 22px; height: 22px; }
 .space-bullets{ margin: 0; padding: 0; list-style: none; display:grid; gap: 10px; color: rgba(31,29,26,.80); font-size: 14px; }
 .space-bullets li{ display:flex; align-items:center; gap: 10px; }
 .space-cta{ margin-top: 12px; }
-
-/* Steps */
-.steps{ display:grid; gap: 12px; }
-.step{
-  display:grid;
-  grid-template-columns: auto 1fr;
-  gap: 14px;
-  padding: 16px;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(222,211,196,.95);
-  background: rgba(255,255,255,.66);
-}
-.step-num{
-  width: 44px;
-  height: 44px;
-  border-radius: 18px;
-  display:grid;
-  place-items:center;
-  font-weight: 880;
-  letter-spacing: .3px;
-  background: rgba(127,174,160,.16);
-  border: 1px solid rgba(127,174,160,.28);
-  color: rgba(31,29,26,.90);
-}
 
 /* FAQ */
 .faq-grid{ display:grid; gap: 12px; }
@@ -713,6 +747,12 @@ svg{ width: 22px; height: 22px; }
 }
 .textarea{ resize: vertical; min-height: 120px; }
 .form-actions{ display:flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.form-note{
+  margin: 6px 0 0;
+  color: rgba(31,29,26,.62);
+  font-size: 13px;
+  line-height: 1.6;
+}
 
 /* Footer */
 .footer{
@@ -736,7 +776,7 @@ svg{ width: 22px; height: 22px; }
 .to-top{
   position: fixed;
   right: 18px;
-  bottom: 18px;
+  bottom: 84px; /* αφήνει χώρο για sticky CTA */
   width: 46px;
   height: 46px;
   border-radius: 999px;
@@ -764,9 +804,42 @@ svg{ width: 22px; height: 22px; }
   border-color: rgba(200,165,123,.60);
 }
 
-/* -------------------------------------------
-   Fade-in sections + staggered services
-------------------------------------------- */
+/* Sticky CTA (mobile-first) */
+.sticky-cta{
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 70;
+  display:flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(222,211,196,.95);
+  background: rgba(255,255,255,.72);
+  box-shadow: 0 18px 50px rgba(31,29,26,.14);
+  backdrop-filter: blur(10px);
+}
+.sticky-btn{
+  flex: 1;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 12px 14px;
+  font-weight: 800;
+  font-size: 14px;
+  text-align:center;
+  border: 1px solid rgba(222,211,196,.95);
+  background: rgba(255,255,255,.78);
+}
+.sticky-btn--book{
+  background: rgba(200,165,123,.96);
+  border-color: rgba(200,165,123,.60);
+  color: #231c12;
+}
+.sticky-btn:hover{ transform: translateY(-1px); }
+.sticky-btn:active{ transform: translateY(1px); }
+
+/* Fade-in sections */
 .fade-in-section{
   opacity: 0;
   transform: translateY(18px);
@@ -777,8 +850,6 @@ svg{ width: 22px; height: 22px; }
   opacity: 1;
   transform: translateY(0);
 }
-
-/* stagger only for services cards */
 #services .card.fade-in-section:nth-child(1){ transition-delay: .10s; }
 #services .card.fade-in-section:nth-child(2){ transition-delay: .20s; }
 #services .card.fade-in-section:nth-child(3){ transition-delay: .30s; }
@@ -789,6 +860,8 @@ svg{ width: 22px; height: 22px; }
   .nav-toggle{ display:none; }
   .mobile-nav{ display:none; }
 
+  .site-header{ top: 44px; }
+
   .section{ padding: var(--space-7) 0; }
   .hero{ padding-top: calc(var(--space-7) - 20px); }
 
@@ -796,6 +869,8 @@ svg{ width: 22px; height: 22px; }
   .visual-card-mid{ grid-template-columns: 1fr 1fr; }
 
   .cards-grid{ grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .cards-grid--two{ grid-template-columns: 1fr 1fr; gap: 16px; }
+
   .faq-grid{ grid-template-columns: 1fr 1fr; gap: 14px; }
 
   .contact-grid{
@@ -820,6 +895,10 @@ svg{ width: 22px; height: 22px; }
     justify-content: space-between;
     align-items: center;
   }
+
+  /* desktop: κρύψε sticky CTA */
+  .sticky-cta{ display:none; }
+  .to-top{ bottom: 18px; }
 }
 
 @media (prefers-reduced-motion: reduce){
