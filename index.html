@@ -1,31 +1,107 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="el">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ψυχολόγος στη Ρόδο — Νικολέτα Πλατή</title>
-  <meta name="description" content="Ψυχολογική υποστήριξη στη Ρόδο. Συμβουλευτική ενηλίκων, παιγνιοθεραπεία και ABA. Κλείστε ραντεβού." />
 
+  <title>Ψυχολόγος στη Ρόδο — Νικολέτα Πλατή</title>
+  <meta name="description" content="Ψυχολογική υποστήριξη στη Ρόδο. Συμβουλευτική ενηλίκων, παιγνιοθεραπεία και ABA. Κλείστε 10′ τηλεφωνική γνωριμία." />
+
+  <link rel="canonical" href="https://fotisan.github.io/nikoleta-plati/" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="el_GR" />
+  <meta property="og:title" content="Ψυχολόγος στη Ρόδο — Νικολέτα Πλατή" />
+  <meta property="og:description" content="Συμβουλευτική ενηλίκων, παιγνιοθεραπεία και ABA. Κλείστε 10′ τηλεφωνική γνωριμία." />
+  <!-- βάλε ένα πραγματικό og image 1200x630 -->
+  <meta property="og:image" content="assets/og.jpg" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=1100" />
+  <link rel="stylesheet" href="styles.css?v=1200" />
+
+  <!-- LocalBusiness + FAQ schema (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Νικολέτα Πλατή — Ψυχολόγος",
+    "areaServed": "Ρόδος",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ρόδος",
+      "addressCountry": "GR"
+    },
+    "url": "https://fotisan.github.io/nikoleta-plati/",
+    "telephone": "+30XXXXXXXXXX"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Πόσο διαρκεί μια συνεδρία;",
+        "acceptedAnswer":{"@type":"Answer","text":"Συνήθως 50 λεπτά."}
+      },
+      {
+        "@type":"Question",
+        "name":"Υπάρχει online;",
+        "acceptedAnswer":{"@type":"Answer","text":"Ναι, όπου χρειάζεται."}
+      },
+      {
+        "@type":"Question",
+        "name":"Πόσες συνεδρίες θα χρειαστώ;",
+        "acceptedAnswer":{"@type":"Answer","text":"Εξαρτάται από το αίτημα και τους στόχους. Το ξεκαθαρίζουμε στις πρώτες συνεδρίες και το επαναξιολογούμε στην πορεία."}
+      },
+      {
+        "@type":"Question",
+        "name":"Τι γίνεται αν χρειαστεί να ακυρώσω;",
+        "acceptedAnswer":{"@type":"Answer","text":"Ιδανικά ενημερώνετε όσο πιο έγκαιρα γίνεται ώστε να βρούμε άλλη διαθέσιμη ώρα."}
+      },
+      {
+        "@type":"Question",
+        "name":"Είναι φυσιολογικό να έχω άγχος πριν την πρώτη συνεδρία;",
+        "acceptedAnswer":{"@type":"Answer","text":"Ναι. Είναι πολύ συνηθισμένο. Η πρώτη συνεδρία είναι κυρίως γνωριμία και ξεκαθάρισμα του πλαισίου."}
+      },
+      {
+        "@type":"Question",
+        "name":"Τι γίνεται με την εμπιστευτικότητα;",
+        "acceptedAnswer":{"@type":"Answer","text":"Η εμπιστευτικότητα είναι βασικός κανόνας. Συζητάμε από την αρχή τι ισχύει και σε ποιες σπάνιες περιπτώσεις υπάρχουν εξαιρέσεις."}
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body id="top">
   <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+
+  <!-- Top helper bar (micro-conversion) -->
+  <div class="topbar" role="region" aria-label="Γρήγορη επικοινωνία">
+    <div class="container topbar-inner">
+      <span class="topbar-text">Θέλετε να δείτε αν ταιριάζουμε; Κλείστε μια <strong>10′ τηλεφωνική γνωριμία</strong>.</span>
+      <a class="topbar-link" href="tel:+30XXXXXXXXXX" aria-label="Κλήση">Κλήση</a>
+    </div>
+  </div>
 
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Αρχική">
         <span class="brand-mark" aria-hidden="true">
-          <!-- Βάλε εδώ το δικό σου logo image -->
           <img src="assets/logo.png" alt="" loading="lazy">
         </span>
 
-        <!-- ✅ ΧΩΡΙΣ πλαίσιο -->
         <span class="brand-text">
           <span class="brand-name">Νικολέτα Πλατή</span>
           <span class="brand-sub">Ψυχολόγος • Ρόδος</span>
@@ -40,9 +116,9 @@
       <nav class="nav" aria-label="Κύρια πλοήγηση">
         <a href="#services">Υπηρεσίες</a>
         <a href="#help">Πώς βοηθάω</a>
+        <a href="#expect">1η συνεδρία</a>
         <a href="#space">Ο χώρος</a>
-        <a href="#process">Διαδικασία</a>
-        <a href="#faq">Συχνές ερωτήσεις</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact" class="btn btn--sm btn--outline">Επικοινωνία</a>
       </nav>
     </div>
@@ -53,10 +129,10 @@
         <a href="#top">Αρχική</a>
         <a href="#services">Υπηρεσίες</a>
         <a href="#help">Πώς βοηθάω</a>
+        <a href="#expect">1η συνεδρία</a>
         <a href="#space">Ο χώρος</a>
-        <a href="#process">Διαδικασία</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact" class="btn btn--primary">Προγραμματισμός συνεδρίας</a>
+        <a href="#contact" class="btn btn--primary">Κλείστε 10′ γνωριμία</a>
       </div>
     </div>
   </header>
@@ -69,34 +145,45 @@
 
         <div class="hero-copy">
           <p class="eyebrow">Ψυχολογική υποστήριξη στη Ρόδο</p>
-          <h1 class="h1">Ασφαλής χώρος για ζωή, φροντίδα και επανεκκίνηση.</h1>
+
+          <h1 class="h1">Να νιώσετε πιο ήρεμα — με καθαρό πλαίσιο και πρακτική καθοδήγηση.</h1>
+
           <p class="lead">
-            Συμβουλευτική ενηλίκων, παιγνιοθεραπεία και θεραπεία συμπεριφοράς (ABA).
-            Μεθοδικά, ανθρώπινα, χωρίς υπερβολές.
+            Αν περνάτε μια περίοδο με <strong>άγχος</strong>, ένταση στις <strong>σχέσεις</strong> ή αλλαγές που σας πιέζουν,
+            δουλεύουμε μαζί μεθοδικά για να αποκτήσετε <strong>εργαλεία</strong> και να δείτε <strong>πρόοδο</strong> στην καθημερινότητα.
           </p>
 
           <div class="hero-cta">
-            <a class="btn btn--primary" href="#contact">Προγραμματισμός συνεδρίας</a>
+            <a class="btn btn--primary" href="#contact">Κλείστε 10′ τηλεφωνική γνωριμία</a>
             <a class="btn btn--outline" href="#services">Δείτε υπηρεσίες</a>
           </div>
 
           <div class="trust-row" aria-label="Δείκτες εμπιστοσύνης">
             <div class="trust"><span class="dot"></span> Εμπιστευτικότητα</div>
-            <div class="trust"><span class="dot dot--soft"></span> Σαφής διαδικασία</div>
+            <div class="trust"><span class="dot dot--soft"></span> Σαφές πλαίσιο</div>
             <div class="trust"><span class="dot"></span> Στόχοι & πρόοδος</div>
+          </div>
+
+          <div class="hero-mini">
+            <div class="hero-mini-card">
+              <strong>Για εσάς αν…</strong>
+              <ul>
+                <li>νιώθετε ότι “τρέχετε” συνέχεια και δεν ηρεμείτε</li>
+                <li>μπλέκεστε σε ίδιους κύκλους σε σχέσεις/όρια</li>
+                <li>έχετε ανάγκη από καθαρή κατεύθυνση, όχι γενικότητες</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <!-- ✅ Διορθωμένο “δεξιά”: photo + card (ίδιο πλάτος, σωστό μέγεθος) -->
         <div class="hero-visual">
           <div class="hero-photo">
-            <!-- άλλαξε το όνομα αν έχεις άλλο αρχείο -->
             <img src="assets/office-main.jpg" alt="Χώρος συνεδρίας" loading="eager">
           </div>
 
           <div class="visual-card">
             <div class="visual-card-top">
-              <span class="pill">Συνεδρίες δια ζώσης</span>
+              <span class="pill">Δια ζώσης στη Ρόδο</span>
               <span class="pill">Online όπου χρειάζεται</span>
             </div>
 
@@ -106,22 +193,23 @@
                 <span class="metric-value">50′</span>
               </div>
               <div class="metric">
-                <span class="metric-label">Ραντεβού</span>
-                <span class="metric-value">1–2 / εβδομάδα</span>
+                <span class="metric-label">Ρυθμός</span>
+                <span class="metric-value">1× / εβδομάδα</span>
               </div>
             </div>
 
             <div class="visual-card-bottom">
               <div class="badge">
                 <span class="badge-icon" aria-hidden="true">✓</span>
-                <span class="badge-text">Καθαρή καθοδήγηση, βήμα-βήμα.</span>
+                <span class="badge-text">Ξεκάθαρο πλάνο από την αρχή.</span>
               </div>
               <div class="badge">
                 <span class="badge-icon" aria-hidden="true">✓</span>
-                <span class="badge-text">Χωρίς “θεατρικές” υποσχέσεις.</span>
+                <span class="badge-text">Στόχοι που “μετράνε” στην καθημερινότητα.</span>
               </div>
             </div>
           </div>
+
         </div>
 
       </div>
@@ -132,14 +220,13 @@
       <div class="container">
         <div class="section-head">
           <h2 class="h2">Υπηρεσίες</h2>
-          <p class="sub">Επιλέγουμε μαζί τι χρειάζεται, με βάση το αίτημά σας.</p>
+          <p class="sub">Επιλέγουμε μαζί τι χρειάζεται — ανάλογα με το αίτημα και το πλαίσιο.</p>
         </div>
 
         <div class="cards-grid">
 
           <article class="card fade-in-section">
             <div class="icon" aria-hidden="true">
-              <!-- chat bubble -->
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M8 18l-3 3v-4a7 7 0 01-1-4c0-4.1 3.6-7 8-7s8 2.9 8 7-3.6 7-8 7H8z"
                       stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -148,17 +235,18 @@
               </svg>
             </div>
             <h3 class="h3">Συμβουλευτική ενηλίκων</h3>
-            <p class="p">Άγχος, σχέσεις, αλλαγές ζωής, αυτοεκτίμηση.</p>
+            <p class="p">
+              Άγχος, σχέσεις, αλλαγές ζωής, αυτοεκτίμηση — με στόχο να χτίσετε σταθερότητα και πρακτικά εργαλεία.
+            </p>
             <ul class="mini-list">
-              <li>Σαφής στόχος</li>
-              <li>Πλάνο συνεδριών</li>
+              <li>Συμφωνούμε στόχο</li>
+              <li>Βήματα & προτεραιότητες</li>
               <li>Εργαλεία για την καθημερινότητα</li>
             </ul>
           </article>
 
           <article class="card fade-in-section">
             <div class="icon" aria-hidden="true">
-              <!-- puzzle / play -->
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M14 4h2a2 2 0 012 2v2a2 2 0 00-2 2 2 2 0 002 2v2a2 2 0 01-2 2h-2"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -171,17 +259,18 @@
               </svg>
             </div>
             <h3 class="h3">Παιγνιοθεραπεία</h3>
-            <p class="p">Έκφραση, συναισθήματα, συμπεριφορά, όρια.</p>
+            <p class="p">
+              Για παιδιά που δυσκολεύονται να εκφράσουν συναισθήματα, να βάλουν όρια ή να ρυθμίσουν συμπεριφορά.
+            </p>
             <ul class="mini-list">
-              <li>Συνεργασία με γονείς</li>
-              <li>Σταθερότητα</li>
               <li>Ασφαλές πλαίσιο</li>
+              <li>Συνεργασία με γονείς</li>
+              <li>Σταθερότητα & συνέπεια</li>
             </ul>
           </article>
 
           <article class="card fade-in-section">
             <div class="icon" aria-hidden="true">
-              <!-- target -->
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M12 21a9 9 0 110-18 9 9 0 010 18z" stroke="currentColor" stroke-width="2"/>
                 <path d="M12 17a5 5 0 110-10 5 5 0 010 10z" stroke="currentColor" stroke-width="2"/>
@@ -190,9 +279,11 @@
               </svg>
             </div>
             <h3 class="h3">ABA / Συμπεριφορική υποστήριξη</h3>
-            <p class="p">Δομημένη παρέμβαση, στόχοι, πρακτική εφαρμογή.</p>
+            <p class="p">
+              Δομημένη παρέμβαση με στόχους, παρακολούθηση και πρακτική εφαρμογή στην καθημερινότητα.
+            </p>
             <ul class="mini-list">
-              <li>Μετρήσιμη πρόοδος</li>
+              <li>Στόχοι & μετρήσιμη πρόοδος</li>
               <li>Ρουτίνα & δεξιότητες</li>
               <li>Συνεργασία με οικογένεια</li>
             </ul>
@@ -206,19 +297,60 @@
     <section class="section fade-in-section" id="help" aria-label="Πώς βοηθάω">
       <div class="container">
         <div class="section-head">
-          <h2 class="h2">Πώς μπορώ να σας βοηθήσω</h2>
-          <p class="sub">Ένα ξεκάθαρο πλαίσιο που σας κρατάει ασφαλείς.</p>
+          <h2 class="h2">Πώς δουλεύουμε μαζί</h2>
+          <p class="sub">Ένα πλαίσιο που σας κρατάει ασφαλείς και σας προχωράει μπροστά.</p>
         </div>
 
         <div class="help-grid">
           <div class="help-card">
-            <h3 class="h3">Σαφήνεια</h3>
-            <p class="p">Ορίζουμε τι είναι το “πρόβλημα” όπως το ζείτε εσείς.</p>
+            <h3 class="h3">Καθαρή κατανόηση</h3>
+            <p class="p">Ορίζουμε μαζί τι συμβαίνει (όπως το ζείτε εσείς) και τι θέλετε να αλλάξει.</p>
           </div>
           <div class="help-card">
-            <h3 class="h3">Στήριξη</h3>
-            <p class="p">Χτίζουμε εργαλεία, όχι εξάρτηση.</p>
+            <h3 class="h3">Πρακτικά εργαλεία</h3>
+            <p class="p">Χτίζουμε δεξιότητες και στρατηγικές που εφαρμόζονται εκτός συνεδρίας.</p>
           </div>
+          <div class="help-card">
+            <h3 class="h3">Στόχοι & πρόοδος</h3>
+            <p class="p">Συμφωνούμε τι σημαίνει “πάω καλύτερα” και το παρακολουθούμε στην πορεία.</p>
+          </div>
+          <div class="help-card">
+            <h3 class="h3">Χωρίς υπερβολές</h3>
+            <p class="p">Ούτε “μαγικές λύσεις”. Μόνο ανθρώπινη δουλειά, μεθοδικά και με σεβασμό.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPECTATIONS -->
+    <section class="section section--soft fade-in-section" id="expect" aria-label="Τι να περιμένετε στην πρώτη συνεδρία">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="h2">Τι να περιμένετε στην 1η συνεδρία</h2>
+          <p class="sub">Να ξέρετε από πριν πώς λειτουργεί — αυτό μειώνει το άγχος.</p>
+        </div>
+
+        <div class="cards-grid cards-grid--two">
+          <div class="card">
+            <h3 class="h3">1) Γνωριμία & αίτημα</h3>
+            <p class="p">Μιλάμε για το τι σας φέρνει εδώ και τι σας δυσκολεύει τώρα.</p>
+          </div>
+          <div class="card">
+            <h3 class="h3">2) Πλαίσιο & κανόνες</h3>
+            <p class="p">Συχνότητα, διάρκεια, εμπιστευτικότητα και ό,τι χρειάζεται για να νιώθετε ασφαλείς.</p>
+          </div>
+          <div class="card">
+            <h3 class="h3">3) Στόχος</h3>
+            <p class="p">Συμφωνούμε έναν πρώτο στόχο — κάτι συγκεκριμένο που έχει νόημα για εσάς.</p>
+          </div>
+          <div class="card">
+            <h3 class="h3">4) Επόμενα βήματα</h3>
+            <p class="p">Φεύγετε με καθαρή εικόνα για το πώς συνεχίζουμε (και αν συνεχίζουμε).</p>
+          </div>
+        </div>
+
+        <div class="note-card" role="note" aria-label="Σημείωση ασφάλειας">
+          <strong>Σημείωση:</strong> Αν βρίσκεστε σε άμεσο κίνδυνο ή κρίση, αναζητήστε άμεσα βοήθεια από τις αρμόδιες υπηρεσίες (112 / τοπικά επείγοντα). Η σελίδα αυτή δεν αντικαθιστά επείγουσα υποστήριξη.
         </div>
       </div>
     </section>
@@ -259,43 +391,7 @@
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section class="section fade-in-section" id="process" aria-label="Διαδικασία">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="h2">Διαδικασία</h2>
-          <p class="sub">Τι να περιμένετε, από την πρώτη επαφή.</p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div>
-              <h3 class="h3">Σύντομη γνωριμία</h3>
-              <p class="p">Καταγράφουμε το αίτημα και στόχους.</p>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-num">2</div>
-            <div>
-              <h3 class="h3">Πλάνο συνεδριών</h3>
-              <p class="p">Συχνότητα, διάρκεια και προτεραιότητες.</p>
-            </div>
-          </div>
-
-          <div class="step">
-            <div class="step-num">3</div>
-            <div>
-              <h3 class="h3">Πρόοδος</h3>
-              <p class="p">Αξιολόγηση και προσαρμογή.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ (✅ +2 πεδία) -->
+    <!-- FAQ -->
     <section class="section section--soft fade-in-section" id="faq" aria-label="Συχνές ερωτήσεις">
       <div class="container">
         <div class="section-head">
@@ -324,7 +420,6 @@
             <div class="faq-body"><p class="p">Ιδανικά ενημερώνετε όσο πιο έγκαιρα γίνεται ώστε να βρούμε άλλη διαθέσιμη ώρα.</p></div>
           </details>
 
-          <!-- ✅ 2 extra -->
           <details class="faq">
             <summary>Είναι “φυσιολογικό” να νιώθω άγχος πριν την πρώτη συνεδρία;</summary>
             <div class="faq-body"><p class="p">Ναι. Είναι πολύ συνηθισμένο. Η πρώτη συνεδρία είναι κυρίως γνωριμία και ξεκαθάρισμα του πλαισίου.</p></div>
@@ -343,7 +438,7 @@
       <div class="container">
         <div class="section-head">
           <h2 class="h2">Επικοινωνία</h2>
-          <p class="sub">Στείλτε μήνυμα και θα απαντήσω σύντομα.</p>
+          <p class="sub">Στείλτε μήνυμα ή καλέστε. Θα απαντήσω σύντομα.</p>
         </div>
 
         <div class="contact-grid">
@@ -363,10 +458,18 @@
 
             <div class="divider"></div>
 
-            <form class="contact-form">
+            <!-- ✅ Το form τώρα στέλνει.
+                 1) Βάλε action από Formspree (ή δικό σου endpoint)
+                 2) method POST -->
+            <form class="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST">
               <div class="field">
                 <label class="field-label" for="name">Ονοματεπώνυμο</label>
                 <input class="input" id="name" name="name" autocomplete="name" required>
+              </div>
+
+              <div class="field">
+                <label class="field-label" for="phone">Τηλέφωνο (προαιρετικό)</label>
+                <input class="input" id="phone" name="phone" autocomplete="tel" inputmode="tel">
               </div>
 
               <div class="field">
@@ -374,10 +477,14 @@
                 <textarea class="textarea" id="msg" name="message" required></textarea>
               </div>
 
+              <input type="hidden" name="_subject" value="Νέο μήνυμα από το site — Νικολέτα Πλατή">
+
               <div class="form-actions">
-                <button class="btn btn--primary" type="submit">Αποστολή</button>
-                <a class="btn btn--outline" href="#services">Υπηρεσίες</a>
+                <button class="btn btn--primary" type="submit">Αποστολή μηνύματος</button>
+                <a class="btn btn--outline" href="tel:+30XXXXXXXXXX">Κλήση</a>
               </div>
+
+              <p class="form-note">Αν προτιμάτε, μπορείτε να γράψετε μόνο “Θέλω 10′ γνωριμία” και να αφήσετε τη διαθεσιμότητά σας.</p>
             </form>
           </div>
 
@@ -393,7 +500,7 @@
       </div>
     </section>
 
-    <!-- Footer (χωρίς “πάνω”) -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="container footer-inner">
         <p class="fine">© <span id="year"></span> Νικολέτα Πλατή</p>
@@ -402,7 +509,7 @@
 
   </main>
 
-  <!-- ✅ Back to top button -->
+  <!-- Back to top -->
   <button class="to-top" type="button" aria-label="Πάνω" title="Πάνω">
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path d="M12 5l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -410,6 +517,16 @@
       <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </svg>
   </button>
+
+  <!-- ✅ Mobile sticky CTA -->
+  <div class="sticky-cta" role="region" aria-label="Γρήγορη ενέργεια">
+    <a class="sticky-btn sticky-btn--call" href="tel:+30XXXXXXXXXX" aria-label="Κλήση">
+      Κλήση
+    </a>
+    <a class="sticky-btn sticky-btn--book" href="#contact" aria-label="Κλείστε 10 λεπτά γνωριμία">
+      Κλείστε 10′ γνωριμία
+    </a>
+  </div>
 
   <script>
     // year
