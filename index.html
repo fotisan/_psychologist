@@ -16,7 +16,6 @@
   <meta property="og:locale" content="el_GR" />
   <meta property="og:title" content="Ψυχολόγος στη Ρόδο — Νικολέτα Πλατή" />
   <meta property="og:description" content="Συμβουλευτική ενηλίκων, παιγνιοθεραπεία και ABA. Επικοινωνήστε για ραντεβού και διαθεσιμότητα." />
-  <!-- βάλε ένα πραγματικό og image 1200x630 -->
   <meta property="og:image" content="assets/og.jpg" />
 
   <!-- Fonts -->
@@ -24,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=1201" />
+  <link rel="stylesheet" href="styles.css?v=1202" />
 
   <!-- LocalBusiness + FAQ schema (SEO) -->
   <script type="application/ld+json">
@@ -136,10 +135,15 @@
         <div class="hero-copy">
           <p class="eyebrow">Ψυχολογική υποστήριξη στη Ρόδο</p>
 
-          <h1 class="h1">Αφήστε το άγχος στην πόρτα. Εδώ έχετε τον χώρο και τον χρόνο να βρείτε ξανά τον εαυτό σας.</h1>
+          <!-- ✅ Updated H1 -->
+          <h1 class="h1">
+            <span class="h1-line">Αφήστε το άγχος στην πόρτα.</span>
+            <span class="h1-line">Έχετε τον χώρο και τον χρόνο</span>
+            <span class="h1-line">να βρείτε ξανά τον εαυτό σας.</span>
+          </h1>
 
           <p class="lead">
-            Αφήνουμε πίσω τις <strong>γενικότητες</strong>, Δουλεύουμε <strong>μεθοδικά</strong> πάνω στις δικές σας προκλήσεις, για να βρείτε ξανά την 
+            Αφήνουμε πίσω τις <strong>γενικότητες</strong>, Δουλεύουμε <strong>μεθοδικά</strong> πάνω στις δικές σας προκλήσεις, για να βρείτε ξανά την
             <strong>ηρεμία</strong> και τον <strong>έλεγχο</strong> στην καθημερινότητα.
           </p>
 
@@ -444,9 +448,6 @@
 
             <div class="divider"></div>
 
-            <!-- ✅ Το form τώρα στέλνει.
-                 1) Βάλε action από Formspree (ή δικό σου endpoint)
-                 2) method POST -->
             <form class="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST">
               <div class="field">
                 <label class="field-label" for="name">Ονοματεπώνυμο</label>
@@ -504,7 +505,7 @@
     </svg>
   </button>
 
-  <!-- ✅ Mobile sticky CTA -->
+  <!-- Mobile sticky CTA -->
   <div class="sticky-cta" role="region" aria-label="Γρήγορη ενέργεια">
     <a class="sticky-btn sticky-btn--call" href="tel:+30XXXXXXXXXX" aria-label="Κλήση">
       Κλήση
