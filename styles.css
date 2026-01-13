@@ -37,7 +37,7 @@
   --font-serif: "Playfair Display", ui-serif, Georgia, "Times New Roman", serif;
 }
 
-/* ✅ One unified background canvas across the whole site */
+/* unified background canvas */
 :root::before{
   content:"";
   position: fixed;
@@ -65,7 +65,6 @@ body{
 
 a{ color: inherit; }
 img{ max-width: 100%; display:block; }
-/* ⛔️ Μην ορίζεις global svg size εδώ για να μην επηρεάζει τα service icons */
 svg{ display:block; }
 
 .container{
@@ -142,9 +141,6 @@ svg{ display:block; }
   display:flex;
   flex-direction: column;
   line-height: 1.15;
-  padding: 0;
-  border: 0;
-  background: transparent;
 }
 .brand-name{
   font-family: var(--font-serif);
@@ -256,7 +252,7 @@ svg{ display:block; }
   margin: 0 0 18px;
   letter-spacing: -0.8px;
 }
-.h1-line{ display:block; } /* ✅ for the new H1 layout */
+.h1-line{ display:block; }
 
 .h2{
   font-family: var(--font-serif);
@@ -497,7 +493,6 @@ svg{ display:block; }
 
 /* Cards */
 .cards-grid{ display:grid; gap: 14px; }
-.cards-grid--two{ display:grid; gap: 14px; }
 
 .card{
   background: rgba(255,255,255,.84);
@@ -507,42 +502,55 @@ svg{ display:block; }
   padding: 18px;
 }
 
-/* ✅ Services icons — redesigned to match the site */
+/* Services icons — styled to match the “minimal rounded-square” look */
 .icon{
-  width: 46px;
-  height: 46px;
-  border-radius: 999px;
-  display:grid;
-  place-items:center;
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
   margin-bottom: 12px;
 
+  background: rgba(31,29,26,.06);
   border: 1px solid rgba(222,211,196,.95);
-  background:
-    radial-gradient(18px 18px at 30% 28%, rgba(200,165,123,.28), transparent 70%),
-    radial-gradient(18px 18px at 70% 70%, rgba(127,174,160,.20), transparent 70%),
-    radial-gradient(18px 18px at 70% 25%, rgba(230,193,177,.22), transparent 70%),
-    rgba(255,255,255,.78);
-
   box-shadow:
-    0 10px 26px rgba(31,29,26,.08),
-    inset 0 1px 0 rgba(255,255,255,.65);
-  color: rgba(31,29,26,.78);
+    0 14px 34px rgba(31,29,26,.10),
+    inset 0 1px 0 rgba(255,255,255,.70);
+
+  color: rgba(31,29,26,.74);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease, color .25s ease, box-shadow .25s ease;
 }
 
-/* Make service SVGs softer + consistent */
+.icon::after{
+  content:"";
+  position:absolute;
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  pointer-events:none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.35);
+  opacity: .65;
+}
+
+/* Keep service icons consistent */
 #services .icon svg{
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
 #services .icon path{
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 1.75; /* softer than 2 */
+  stroke-width: 1.85;
 }
 #services .icon:hover{
-  border-color: rgba(200,165,123,.55);
+  transform: translateY(-2px);
+  background: rgba(31,29,26,.045);
+  border-color: rgba(200,165,123,.70);
   color: rgba(31,29,26,.90);
-  transform: translateY(-1px);
+  box-shadow:
+    0 18px 44px rgba(31,29,26,.12),
+    inset 0 1px 0 rgba(255,255,255,.75);
 }
 
 .mini-list{
@@ -619,7 +627,6 @@ svg{ display:block; }
 }
 .space-bullets{ margin: 0; padding: 0; list-style: none; display:grid; gap: 10px; color: rgba(31,29,26,.80); font-size: 14px; }
 .space-bullets li{ display:flex; align-items:center; gap: 10px; }
-.space-cta{ margin-top: 12px; }
 
 /* FAQ */
 .faq-grid{ display:grid; gap: 12px; }
@@ -752,73 +759,6 @@ svg{ display:block; }
   color: rgba(31,29,26,.66);
 }
 
-/* Back to top */
-.to-top{
-  position: fixed;
-  right: 18px;
-  bottom: 84px;
-  width: 46px;
-  height: 46px;
-  border-radius: 999px;
-  border: 1px solid rgba(222,211,196,.95);
-  background: rgba(255,255,255,.78);
-  color: rgba(31,29,26,.86);
-  box-shadow: 0 18px 50px rgba(31,29,26,.14);
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(10px);
-  pointer-events: none;
-  transition: opacity .18s ease, transform .18s ease, background .2s ease, border-color .2s ease;
-  backdrop-filter: blur(10px);
-}
-.to-top svg{ width: 20px; height: 20px; }
-.to-top.is-visible{
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-.to-top:hover{
-  background: rgba(255,255,255,.92);
-  border-color: rgba(200,165,123,.60);
-}
-
-/* Sticky CTA (mobile-first) */
-.sticky-cta{
-  position: fixed;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  z-index: 70;
-  display:flex;
-  gap: 10px;
-  padding: 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(222,211,196,.95);
-  background: rgba(255,255,255,.72);
-  box-shadow: 0 18px 50px rgba(31,29,26,.14);
-  backdrop-filter: blur(10px);
-}
-.sticky-btn{
-  flex: 1;
-  text-decoration: none;
-  border-radius: 999px;
-  padding: 12px 14px;
-  font-weight: 800;
-  font-size: 14px;
-  text-align:center;
-  border: 1px solid rgba(222,211,196,.95);
-  background: rgba(255,255,255,.78);
-}
-.sticky-btn--book{
-  background: rgba(200,165,123,.96);
-  border-color: rgba(200,165,123,.60);
-  color: #231c12;
-}
-.sticky-btn:hover{ transform: translateY(-1px); }
-.sticky-btn:active{ transform: translateY(1px); }
-
 /* Fade-in sections */
 .fade-in-section{
   opacity: 0;
@@ -847,7 +787,6 @@ svg{ display:block; }
   .visual-card-mid{ grid-template-columns: 1fr 1fr; }
 
   .cards-grid{ grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .cards-grid--two{ grid-template-columns: 1fr 1fr; gap: 16px; }
 
   .faq-grid{ grid-template-columns: 1fr 1fr; gap: 14px; }
 
@@ -868,21 +807,17 @@ svg{ display:block; }
   .contact-cover{ height: 210px; }
 
   .hero-photo{ height: 260px; }
+
   .footer-inner{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-
-  /* desktop: κρύψε sticky CTA */
-  .sticky-cta{ display:none; }
-  .to-top{ bottom: 18px; }
 }
 
 @media (prefers-reduced-motion: reduce){
   *{ scroll-behavior: auto !important; transition: none !important; }
   #services .card, #services .card:hover{ transform: none !important; }
-  .to-top{ transition: none !important; }
   .fade-in-section{
     opacity: 1 !important;
     transform: none !important;
