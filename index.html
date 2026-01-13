@@ -2,332 +2,166 @@
 <html lang="el">
 <head>
   <meta charset="utf-8" />
-  <title>Νικολέτα Πλατή — Ψυχολόγος στη Ρόδο</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css?v=1">
+
+  <title>Ψυχολόγος στη Ρόδο — Νικολέτα Πλατή</title>
+  <meta name="description" content="Ψυχολογική υποστήριξη στη Ρόδο. Συμβουλευτική ενηλίκων, παιγνιοθεραπεία και ABA. Επικοινωνήστε για ραντεβού και διαθεσιμότητα." />
+
+  <link rel="canonical" href="https://fotisan.github.io/nikoleta-plati/" />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="el_GR" />
+  <meta property="og:title" content="Ψυχολόγος στη Ρόδο — Νικολέτα Πλατή" />
+  <meta property="og:description" content="Συμβουλευτική ενηλίκων, παιγνιοθεραπεία και ABA. Επικοινωνήστε για ραντεβού και διαθεσιμότητα." />
+  <meta property="og:image" content="assets/og.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=1400" />
 </head>
 
 <body id="top">
+  <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
 
-  <header class="site-header" role="banner">
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" aria-label="Πίσω στην κορυφή">
+    ↑
+  </button>
+
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Αρχική">
         <span class="brand-mark">
-          <img src="logo.jpg" alt="Λογότυπο Νικολέτα Πλατή" loading="eager" decoding="async">
+          <img src="logo.jpg" alt="Λογότυπο Νικολέτα Πλατή" loading="lazy">
         </span>
         <span class="brand-text">
-          <strong class="brand-name">Νικολέτα Πλατή</strong>
+          <span class="brand-name">Νικολέτα Πλατή</span>
           <span class="brand-sub">Ψυχολόγος • Ρόδος</span>
         </span>
       </a>
 
-      <nav class="nav" aria-label="Κύρια πλοήγηση">
+      <button class="nav-toggle" type="button" aria-label="Άνοιγμα μενού">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <nav class="nav">
         <a href="#services">Υπηρεσίες</a>
         <a href="#help">Πώς βοηθάω</a>
         <a href="#space">Ο χώρος</a>
         <a href="#faq">FAQ</a>
-        <a class="btn btn--nav" href="#contact">Επικοινωνία</a>
+        <a href="#contact" class="btn btn--sm btn--outline">Επικοινωνία</a>
       </nav>
+    </div>
 
-      <button class="nav-toggle" type="button" aria-label="Άνοιγμα μενού" aria-expanded="false">
-        <span></span>
-        <span></span>
-      </button>
+    <div class="mobile-nav">
+      <div class="mobile-nav-inner">
+        <a href="#top">Αρχική</a>
+        <a href="#services">Υπηρεσίες</a>
+        <a href="#help">Πώς βοηθάω</a>
+        <a href="#space">Ο χώρος</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn--primary">Επικοινωνήστε</a>
+      </div>
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- HERO -->
-    <section class="hero" aria-label="Κεντρική ενότητα">
+    <section class="section hero fade-in-section">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">ΨΥΧΟΛΟΓΙΚΗ ΥΠΟΣΤΗΡΙΞΗ ΣΤΗ ΡΟΔΟ</p>
-
-          <h1 class="hero-title">
-            Αφήστε το άγχος στην πόρτα.<br>
-            Έχετε τον χώρο και τον χρόνο<br>
-            να βρείτε ξανά τον εαυτό σας.
+          <p class="eyebrow">Ψυχολογική υποστήριξη στη Ρόδο</p>
+          <h1 class="h1">
+            <span class="h1-line">Αφήστε το άγχος στην πόρτα.</span>
+            <span class="h1-line">Έχετε τον χώρο</span>
+            <span class="h1-line">και τον χρόνο</span>
+            <span class="h1-line">να βρείτε ξανά τον εαυτό σας.</span>
           </h1>
 
-          <p class="hero-lead">
-            Αφήνουμε πίσω τις <strong>γενικότητες</strong>. Δουλεύουμε μεθοδικά πάνω στις δικές σας προκλήσεις,
-            για να βρείτε ξανά την <strong>ηρεμία</strong> και τον <strong>έλεγχο</strong> στην καθημερινότητα.
+          <p class="lead">
+            Αφήνουμε πίσω τις <strong>γενικότητες</strong>, δουλεύουμε <strong>μεθοδικά</strong> πάνω στις δικές σας προκλήσεις,
+            για να βρείτε ξανά την <strong>ηρεμία</strong> και τον <strong>έλεγχο</strong>.
           </p>
 
-          <div class="hero-actions">
+          <div class="hero-cta">
             <a class="btn btn--primary" href="#contact">Κλείστε ραντεβού</a>
             <a class="btn btn--outline" href="#services">Δείτε υπηρεσίες</a>
           </div>
-
-          <ul class="hero-badges" aria-label="Βασικές αξίες">
-            <li>Εμπιστευτικότητα</li>
-            <li>Σαφές πλαίσιο</li>
-            <li>Στόχοι &amp; πρόοδος</li>
-          </ul>
         </div>
 
-        <div class="hero-card">
-          <div class="hero-card-top">
-            <div class="hero-card-media" aria-label="Χώρος συνεδρίας"></div>
-          </div>
-
-          <div class="hero-card-bottom">
-            <div class="pill-row">
-              <span class="pill">Δια ζώσης στη Ρόδο</span>
-              <span class="pill">Online όπου χρειάζεται</span>
-            </div>
-
-            <div class="mini-grid">
-              <div class="mini">
-                <span class="mini-label">Διάρκεια</span>
-                <strong class="mini-value">50'</strong>
-              </div>
-              <div class="mini">
-                <span class="mini-label">Ρυθμός</span>
-                <strong class="mini-value">Ανάλογα με τις ανάγκες</strong>
-              </div>
-            </div>
-
-            <ul class="checklist" aria-label="Τι να περιμένετε">
-              <li>Ξεκάθαρο πλάνο από την αρχή.</li>
-              <li>Στόχοι που “μετράνε” στην καθημερινότητα.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="hero-note">
-          <h3>Για εσάς αν…</h3>
-          <ul>
-            <li>νιώθετε ότι “τρέχετε” συνέχεια και δεν ηρεμείτε</li>
-            <li>μπλέκεστε σε ίδιους κύκλους σε σχέσεις/όρια</li>
-            <li>έχετε ανάγκη από καθαρή κατεύθυνση, όχι γενικότητες</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="section services">
-      <div class="container">
-        <div class="section-head">
-          <h2>Υπηρεσίες</h2>
-          <p>Επιλέξτε μια υπηρεσία και ζητήστε να κλείσετε ραντεβού.</p>
-          <a class="section-link" href="#contact">Προβολή όλων</a>
-        </div>
-
-        <div class="services-list">
-          <article class="service-item">
-            <div class="service-icon" aria-hidden="true"></div>
-            <div class="service-text">
-              <h3>Συμβουλευτική</h3>
-              <p>Η διάρκεια διαφέρει</p>
-            </div>
-          </article>
-
-          <article class="service-item">
-            <div class="service-icon" aria-hidden="true"></div>
-            <div class="service-text">
-              <h3>Θεραπεία συμπεριφοράς (ABA)</h3>
-              <p>Η διάρκεια διαφέρει</p>
-            </div>
-          </article>
-
-          <article class="service-item">
-            <div class="service-icon" aria-hidden="true"></div>
-            <div class="service-text">
-              <h3>Παιγνιοθεραπεία</h3>
-              <p>Η διάρκεια διαφέρει</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- HELP -->
-    <section id="help" class="section help">
-      <div class="container">
-        <div class="section-head">
-          <h2>Πώς βοηθάω</h2>
-          <p>Σαφές πλαίσιο, πρακτική κατεύθυνση, μεθοδική δουλειά πάνω σε αυτό που σας δυσκολεύει.</p>
-        </div>
-
-        <div class="help-grid">
-          <div class="help-card">
-            <h3>Από την πρώτη συνάντηση</h3>
-            <p>Χαρτογραφούμε τι συμβαίνει, τι θέλετε να αλλάξει και τι είναι ρεαλιστικό να δουλέψουμε.</p>
-          </div>
-          <div class="help-card">
-            <h3>Στόχοι που “μετράνε”</h3>
-            <p>Θέτουμε στόχους που φαίνονται στην καθημερινότητα — όχι αόριστες υποσχέσεις.</p>
-          </div>
-          <div class="help-card">
-            <h3>Σταθερότητα &amp; ευελιξία</h3>
-            <p>Ο ρυθμός προσαρμόζεται, ανάλογα με τις ανάγκες, τον χρόνο και την πορεία σας.</p>
+        <div class="hero-visual">
+          <div class="hero-photo">
+            <img src="assets/office-main.jpg" alt="Χώρος συνεδρίας">
           </div>
         </div>
       </div>
     </section>
 
     <!-- SPACE -->
-    <section id="space" class="section space">
-      <div class="container space-grid">
-        <div class="space-copy">
-          <div class="section-head">
-            <h2>Ο χώρος</h2>
-            <p>Ένα ήρεμο περιβάλλον για να νιώθετε ασφαλείς και παρόντες στη διαδικασία.</p>
-          </div>
-
-          <div class="space-meta">
-            <div class="space-meta-item">
-              <span>Χώρος συνεδρίας</span>
-              <strong>Δια ζώσης στη Ρόδο · Online όπου χρειάζεται</strong>
-            </div>
-            <div class="space-meta-item">
-              <span>Διάρκεια</span>
-              <strong>50'</strong>
-            </div>
-            <div class="space-meta-item">
-              <span>Ρυθμός</span>
-              <strong>Ανάλογα με τις ανάγκες</strong>
-            </div>
-          </div>
-
-          <div class="space-cta">
-            <a class="btn btn--outline btn--space" href="#contact">Ρωτήστε για διαθεσιμότητα</a>
-          </div>
-        </div>
-
-        <div class="space-media">
-          <img src="Hero-section.png" alt="Χώρος συνεδρίας" loading="lazy" decoding="async">
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section faq">
+    <section class="section section--soft fade-in-section" id="space">
       <div class="container">
         <div class="section-head">
-          <h2>FAQ</h2>
-          <p>Μερικές σύντομες απαντήσεις για να ξέρετε τι να περιμένετε.</p>
+          <h2 class="h2">Ο χώρος</h2>
+          <p class="sub">Ήρεμο περιβάλλον, διακριτικότητα και άνεση.</p>
         </div>
 
-        <div class="faq-grid">
-          <details>
-            <summary>Πώς κλείνω ραντεβού;</summary>
-            <p>Συμπληρώστε τα στοιχεία στην Επικοινωνία ή καλέστε/στείλτε email.</p>
-          </details>
-          <details>
-            <summary>Γίνονται online συνεδρίες;</summary>
-            <p>Ναι — όταν χρειάζεται, μπορούμε να δουλέψουμε και online.</p>
-          </details>
-          <details>
-            <summary>Πόσο διαρκεί η διαδικασία;</summary>
-            <p>Η διάρκεια διαφέρει ανάλογα με τους στόχους και την πορεία.</p>
-          </details>
-        </div>
-      </div>
-    </section>
+        <div class="space-grid">
+          <figure class="space-main">
+            <img src="assets/space-1.jpg" alt="Χώρος">
+          </figure>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
-      <div class="container contact-grid">
-        <div class="contact-copy">
-          <div class="section-head">
-            <h2>Στοιχεία επικοινωνίας</h2>
-            <p>Επικοινωνήστε για απορίες ή για να κλείσετε ραντεβού.</p>
+          <div class="space-side">
+            <figure class="space-tile">
+              <img src="assets/space-2.jpg" alt="">
+            </figure>
+
+            <figure class="space-tile">
+              <img src="assets/space-3.jpg" alt="">
+            </figure>
+
+            <div class="space-notes">
+              <ul class="space-bullets">
+                <li><span class="dot"></span> Διακριτική είσοδος</li>
+                <li><span class="dot dot--soft"></span> Ασφαλής ατμόσφαιρα</li>
+              </ul>
+
+              <div class="space-cta">
+                <a class="btn btn--outline btn-space" href="#contact">Ρωτήστε για διαθεσιμότητα</a>
+              </div>
+            </div>
           </div>
-
-          <ul class="contact-list">
-            <li><strong>Διεύθυνση</strong> Στεφάνου Καζούλη 18, Ρόδος, Greece</li>
-            <li><strong>Κινητό</strong> 694 962 6413</li>
-            <li><strong>Email</strong> <a href="mailto:nicoletaplath@gmail.com">nicoletaplath@gmail.com</a></li>
-            <li><strong>Περιοχή εξυπηρέτησης</strong> Ρόδος</li>
-          </ul>
-        </div>
-
-        <div class="contact-map">
-          <img src="Image-contact.png" alt="Χάρτης" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="container footer-inner">
-        <p>© 2026 Νικολέτα Πλατή — Ψυχολόγος στη Ρόδο</p>
+        <p class="fine">© <span id="year"></span> Νικολέτα Πλατή</p>
       </div>
     </footer>
-
   </main>
 
-  <!-- Back to top -->
-  <button class="back-to-top" type="button" aria-label="Πίσω στην κορυφή" title="Πίσω στην κορυφή">
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M12 5l-7 7m7-7l7 7M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-
   <script>
-    // Mobile nav
-    (function(){
-      const toggle = document.querySelector(".nav-toggle");
-      const nav = document.querySelector(".nav");
-      if(!toggle || !nav) return;
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-      const closeMenu = () => {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded","false");
-      };
-
-      toggle.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", String(isOpen));
-      });
-
-      document.addEventListener("click", (e) => {
-        if (!nav.classList.contains("is-open")) return;
-        const t = e.target;
-        if (nav.contains(t) || toggle.contains(t)) return;
-        closeMenu();
-      });
-
-      nav.querySelectorAll("a").forEach(a => {
-        a.addEventListener("click", () => closeMenu());
-      });
-
-      // fade in sections (if used)
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (!prefersReduced) {
-        const els = document.querySelectorAll(".fade-in-section");
-        const obs = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add("is-visible");
-          });
-        }, { threshold: 0.12 });
-        els.forEach(el => obs.observe(el));
+    // Back to top
+    const backToTop = document.querySelector(".back-to-top");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add("visible");
+      } else {
+        backToTop.classList.remove("visible");
       }
+    });
 
-    })();
-
-    // Back to top button
-    (function(){
-      const backTop = document.querySelector(".back-to-top");
-      if (!backTop) return;
-
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      const toggle = () => {
-        backTop.classList.toggle("is-visible", window.scrollY > 240);
-      };
-
-      window.addEventListener("scroll", toggle, { passive: true });
-      toggle();
-
-      backTop.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: prefersReduced ? "auto" : "smooth" });
-      });
-    })();
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   </script>
 
 </body>
