@@ -74,40 +74,6 @@ svg{ width: 22px; height: 22px; }
 
 .no-scroll{ overflow: hidden; }
 
-/* Top helper bar */
-.topbar{
-  position: sticky;
-  top: 0;
-  z-index: 60;
-  background: rgba(255,255,255,.65);
-  border-bottom: 1px solid rgba(222,211,196,.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-.topbar-inner{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 0;
-}
-.topbar-text{
-  font-size: 13px;
-  color: rgba(31,29,26,.78);
-}
-.topbar-link{
-  font-size: 13px;
-  font-weight: 800;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(200,165,123,.18);
-  border: 1px solid rgba(200,165,123,.35);
-}
-.topbar-link:hover{
-  background: rgba(200,165,123,.26);
-}
-
 .skip-link{
   position: absolute;
   left: -999px;
@@ -123,7 +89,7 @@ svg{ width: 22px; height: 22px; }
 /* Header */
 .site-header{
   position: sticky;
-  top: 44px; /* αφήνει χώρο για topbar */
+  top: 0;
   z-index: 50;
   background: rgba(246,241,234,.55);
   border-bottom: 1px solid rgba(230,221,209,.85);
@@ -603,19 +569,6 @@ svg{ width: 22px; height: 22px; }
   padding: 18px;
 }
 
-/* Note card */
-.note-card{
-  margin-top: 16px;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(222,211,196,.95);
-  background: rgba(255,255,255,.68);
-  box-shadow: var(--shadow-soft);
-  padding: 16px;
-  color: rgba(31,29,26,.78);
-  font-size: 14px;
-  line-height: 1.7;
-}
-
 /* Space */
 .space-grid{ display:grid; gap: 14px; }
 .space-main, .space-tile{
@@ -859,8 +812,6 @@ svg{ width: 22px; height: 22px; }
   .nav{ display:flex; }
   .nav-toggle{ display:none; }
   .mobile-nav{ display:none; }
-
-  .site-header{ top: 44px; }
 
   .section{ padding: var(--space-7) 0; }
   .hero{ padding-top: calc(var(--space-7) - 20px); }
