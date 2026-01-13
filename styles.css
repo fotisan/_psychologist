@@ -65,7 +65,8 @@ body{
 
 a{ color: inherit; }
 img{ max-width: 100%; display:block; }
-svg{ width: 22px; height: 22px; }
+/* ⛔️ Μην ορίζεις global svg size εδώ για να μην επηρεάζει τα service icons */
+svg{ display:block; }
 
 .container{
   width: min(var(--container), calc(100% - 40px));
@@ -255,6 +256,8 @@ svg{ width: 22px; height: 22px; }
   margin: 0 0 18px;
   letter-spacing: -0.8px;
 }
+.h1-line{ display:block; } /* ✅ for the new H1 layout */
+
 .h2{
   font-family: var(--font-serif);
   font-size: var(--h2);
@@ -504,19 +507,43 @@ svg{ width: 22px; height: 22px; }
   padding: 18px;
 }
 
-/* icon container */
+/* ✅ Services icons — redesigned to match the site */
 .icon{
-  width: 44px;
-  height: 44px;
-  border-radius: 16px;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
   display:grid;
   place-items:center;
-  background: rgba(200,165,123,.16);
-  border: 1px solid rgba(200,165,123,.28);
-  color: rgba(31,29,26,.88);
   margin-bottom: 12px;
+
+  border: 1px solid rgba(222,211,196,.95);
+  background:
+    radial-gradient(18px 18px at 30% 28%, rgba(200,165,123,.28), transparent 70%),
+    radial-gradient(18px 18px at 70% 70%, rgba(127,174,160,.20), transparent 70%),
+    radial-gradient(18px 18px at 70% 25%, rgba(230,193,177,.22), transparent 70%),
+    rgba(255,255,255,.78);
+
+  box-shadow:
+    0 10px 26px rgba(31,29,26,.08),
+    inset 0 1px 0 rgba(255,255,255,.65);
+  color: rgba(31,29,26,.78);
 }
-.icon svg{ width: 24px; height: 24px; }
+
+/* Make service SVGs softer + consistent */
+#services .icon svg{
+  width: 22px;
+  height: 22px;
+}
+#services .icon path{
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.75; /* softer than 2 */
+}
+#services .icon:hover{
+  border-color: rgba(200,165,123,.55);
+  color: rgba(31,29,26,.90);
+  transform: translateY(-1px);
+}
 
 .mini-list{
   margin: 14px 0 0;
@@ -729,7 +756,7 @@ svg{ width: 22px; height: 22px; }
 .to-top{
   position: fixed;
   right: 18px;
-  bottom: 84px; /* αφήνει χώρο για sticky CTA */
+  bottom: 84px;
   width: 46px;
   height: 46px;
   border-radius: 999px;
