@@ -639,6 +639,11 @@ svg{ display:block; }
 .space-bullets{ margin: 0; padding: 0; list-style: none; display:grid; gap: 10px; color: rgba(31,29,26,.80); font-size: 14px; }
 .space-bullets li{ display:flex; align-items:center; gap: 10px; }
 
+/* ✅ NEW: λίγο μεγαλύτερη απόσταση μεταξύ bullets και CTA ("Ρωτήστε για διαθεσιμότητα") */
+#space .space-cta{
+  margin-top: 14px;
+}
+
 /* ✅ FIX #2: "Ρωτήστε για διαθεσιμότητα" λίγο μικρότερο (font + padding -> μικρότερο πλαίσιο) */
 #space .space-cta .btn{
   font-size: 13px;
