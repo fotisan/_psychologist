@@ -19,7 +19,6 @@
   <meta property="og:locale" content="el_GR" />
   <meta property="og:title" content="Ψυχολόγος στη Ρόδο — Νικολέτα Πλατή" />
   <meta property="og:description" content="Συμβουλευτική ενηλίκων, παιγνιοθεραπεία και ABA. Επικοινωνήστε για ραντεβού και διαθεσιμότητα." />
-  <!-- ✅ FIX: χρησιμοποιούμε εικόνα που υπάρχει στο root -->
   <meta property="og:image" content="Hero-section.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +35,6 @@
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Αρχική">
         <span class="brand-mark" aria-hidden="true">
-          <!-- ✅ FIX: logo.jpg (στο ίδιο folder με το index.html) -->
           <img src="logo.jpg" alt="Λογότυπο Νικολέτα Πλατή" loading="lazy">
         </span>
 
@@ -51,7 +49,7 @@
         <span class="nav-toggle-line"></span>
       </button>
 
-      <nav class="nav" aria-label="Κύρια πλοήγηση">
+      <nav class="nav" aria-label="Κύρια πλοήγγηση">
         <a href="#services">Υπηρεσίες</a>
         <a href="#help">Πώς βοηθάω</a>
         <a href="#space">Ο χώρος</a>
@@ -118,7 +116,6 @@
 
         <div class="hero-visual">
           <div class="hero-photo">
-            <!-- ✅ FIX: Hero-section.png (στο root) -->
             <img src="Hero-section.png" alt="Χώρος συνεδρίας" loading="eager">
           </div>
 
@@ -273,18 +270,15 @@
 
         <div class="space-grid">
           <figure class="space-main">
-            <!-- ✅ FIX: Image1-section4.png -->
             <img src="Image1-section4.png" alt="Χώρος συνεδρίας" loading="lazy">
           </figure>
 
           <div class="space-side">
             <figure class="space-tile">
-              <!-- ✅ FIX: Image2-section4.png -->
               <img src="Image2-section4.png" alt="Λεπτομέρεια χώρου" loading="lazy">
             </figure>
 
             <figure class="space-tile">
-              <!-- ✅ FIX: Image3-section4.png -->
               <img src="Image3-section4.png" alt="Γωνιά αναμονής" loading="lazy">
             </figure>
 
@@ -345,7 +339,6 @@
         <div class="contact-grid">
           <div class="contact-card">
             <div class="contact-cover">
-              <!-- ✅ FIX: Image-contact.png -->
               <img src="Image-contact.png" alt="Χώρος" loading="lazy">
             </div>
 
@@ -378,8 +371,18 @@
               </div>
 
               <div class="field">
-                <label class="field-label" for="phone">Τηλέφωνο (προαιρετικό)</label>
-                <input class="input" id="phone" name="phone" autocomplete="tel" inputmode="tel">
+                <!-- ✅ ΑΛΛΑΓΗ: από προαιρετικό -> υποχρεωτικό -->
+                <label class="field-label" for="phone">Τηλέφωνο</label>
+                <input
+                  class="input"
+                  id="phone"
+                  name="phone"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  required
+                  pattern="^[0-9+\s().-]{8,}$"
+                  title="Παρακαλώ συμπληρώστε ένα έγκυρο τηλέφωνο (τουλάχιστον 8 χαρακτήρες)."
+                >
               </div>
 
               <div class="field">
@@ -416,7 +419,6 @@
 
   </main>
 
-  <!-- ✅ Back to top button -->
   <button class="back-to-top" type="button" aria-label="Πίσω στην κορυφή" title="Πίσω στην κορυφή">
     ↑
   </button>
@@ -470,7 +472,6 @@
       els.forEach(el => obs.observe(el));
     })();
 
-    // ✅ Back-to-top behavior
     (function(){
       const btn = document.querySelector(".back-to-top");
       const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
