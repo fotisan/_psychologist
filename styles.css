@@ -951,3 +951,17 @@ svg{ display:block; }
   .back-to-top{ transform: none !important; }
 }
 
+/* ✅ DEMO NOTICE (added) */
+.demo-bar{
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  padding: 10px 14px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 780;
+  letter-spacing: .2px;
+  color: rgba(31,29,26,.82);
+  background: rgba(200,165,123,.14);
+  border-bottom: 1px solid rgba(200,165,123,.30);
+}
