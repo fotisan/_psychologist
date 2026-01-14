@@ -265,9 +265,6 @@ svg{ display:block; }
 
 .hero .h1{ line-height: 1.02; }
 
-
-
-
 .h2{
   font-family: var(--font-serif);
   font-size: var(--h2);
@@ -642,6 +639,12 @@ svg{ display:block; }
 .space-bullets{ margin: 0; padding: 0; list-style: none; display:grid; gap: 10px; color: rgba(31,29,26,.80); font-size: 14px; }
 .space-bullets li{ display:flex; align-items:center; gap: 10px; }
 
+/* ✅ FIX #2: "Ρωτήστε για διαθεσιμότητα" λίγο μικρότερο (font + padding -> μικρότερο πλαίσιο) */
+#space .space-cta .btn{
+  font-size: 13px;
+  padding: 10px 14px;
+}
+
 /* FAQ */
 .faq-grid{ display:grid; gap: 12px; }
 .faq{
@@ -788,6 +791,40 @@ svg{ display:block; }
 #services .card.fade-in-section:nth-child(2){ transition-delay: .20s; }
 #services .card.fade-in-section:nth-child(3){ transition-delay: .30s; }
 
+/* ✅ FIX #1: Back-to-top button */
+.back-to-top{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(222,211,196,.95);
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 12px 28px rgba(31,29,26,.12);
+  color: rgba(31,29,26,.86);
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  z-index: 60;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity .18s ease, transform .18s ease, background .2s ease, border-color .2s ease;
+}
+.back-to-top:hover{
+  background: rgba(255,255,255,.95);
+  border-color: rgba(200,165,123,.55);
+}
+.back-to-top.is-visible{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 /* Responsive */
 @media (min-width: 860px){
   .nav{ display:flex; }
@@ -836,4 +873,5 @@ svg{ display:block; }
     opacity: 1 !important;
     transform: none !important;
   }
+  .back-to-top{ transform: none !important; }
 }
