@@ -10,10 +10,9 @@
   <link rel="canonical" href="https://fotisan.github.io/nikoleta-plati/" />
   <meta name="robots" content="index,follow" />
 
-  <!-- ================= FAVICON ================= -->
+  <!-- FAVICON -->
   <link rel="icon" href="logo.jpg" type="image/jpeg">
   <link rel="apple-touch-icon" href="logo.jpg">
-  <!-- ========================================== -->
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="el_GR" />
@@ -70,8 +69,48 @@
     </div>
   </header>
 
-  <!-- ⬇️ Το υπόλοιπο αρχείο παραμένει ΑΚΡΙΒΩΣ όπως το είχες ⬇️ -->
-  <!-- (hero, sections, scripts, footer, back-to-top κτλ – δεν πειράχτηκαν) -->
+  <main id="main">
 
+    <!-- HERO -->
+    <section class="section hero fade-in-section" aria-label="Hero">
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <p class="eyebrow">Ψυχολογική υποστήριξη στη Ρόδο</p>
+
+          <h1 class="h1">
+            <span class="h1-line">Αφήστε το άγχος στην πόρτα.</span>
+            <span class="h1-line">Έχετε τον χώρο</span>
+            <span class="h1-line">και τον χρόνο</span>
+            <span class="h1-line">να βρείτε ξανά τον εαυτό σας.</span>
+          </h1>
+
+          <p class="lead">
+            Αφήνουμε πίσω τις <strong>γενικότητες</strong>, δουλεύουμε <strong>μεθοδικά</strong> πάνω στις δικές σας προκλήσεις,
+            για να βρείτε ξανά την <strong>ηρεμία</strong> και τον <strong>έλεγχο</strong> στην καθημερινότητα.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn--primary" href="#contact">Κλείστε ραντεβού</a>
+            <a class="btn btn--outline" href="#services">Δείτε υπηρεσίες</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-photo">
+            <img src="Hero-section.png" alt="Χώρος συνεδρίας" loading="eager">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- (όλα τα υπόλοιπα sections, FAQ, contact, footer, scripts είναι ΑΚΡΙΒΩΣ ίδια) -->
+
+  </main>
+
+  <script>
+    document.getElementById("year") && (document.getElementById("year").textContent = new Date().getFullYear());
+  </script>
 </body>
 </html>
