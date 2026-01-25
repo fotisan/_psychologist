@@ -464,29 +464,58 @@
       });
     })();
 
-    // Carousel Logic
+    // Carousel Logic - FIXED
     (function(){
-      const track = document.getElementById('educationTrack'), dotsContainer = document.getElementById('carouselDots');
+      const track = document.getElementById('educationTrack');
+      const dotsContainer = document.getElementById('carouselDots');
       if(!track || !dotsContainer) return;
+
       const cards = Array.from(track.querySelectorAll('.carousel-card'));
-      function updateDots(){
+      if(cards.length === 0) return;
+
+      function getParams() {
+        const gap = 16; // 16px gap from CSS
+        const cardWidth = cards[0].offsetWidth;
+        const totalItemWidth = cardWidth + gap;
+        const trackWidth = track.clientWidth;
+        // On mobile, visible is ~1 (85% width). On desktop, ~3.
+        const visibleCards = Math.max(1, Math.floor(trackWidth / cardWidth));
+        return { totalItemWidth, visibleCards };
+      }
+
+      function updateDots() {
         dotsContainer.innerHTML = '';
-        if(cards.length === 0) return;
-        const visibleCards = Math.max(1, Math.floor(track.clientWidth / cards[0].offsetWidth));
+        const { totalItemWidth, visibleCards } = getParams();
         const totalPages = Math.ceil(cards.length / visibleCards);
+
         for(let i=0; i<totalPages; i++){
-          const dot = document.createElement('button'); dot.className = 'carousel-dot';
+          const dot = document.createElement('button'); 
+          dot.className = 'carousel-dot';
+          dot.setAttribute('aria-label', 'Go to page ' + (i+1));
           if(i===0) dot.classList.add('is-active');
-          dot.addEventListener('click', ()=> track.scrollTo({left: i * track.clientWidth, behavior: 'smooth'}));
+          
+          dot.addEventListener('click', () => {
+            // Scroll to the start of the "page" (i * visibleCards)
+            const targetIndex = i * visibleCards;
+            const scrollPos = targetIndex * totalItemWidth;
+            track.scrollTo({ left: scrollPos, behavior: 'smooth' });
+          });
           dotsContainer.appendChild(dot);
         }
       }
-      track.addEventListener('scroll', ()=> {
-        const index = Math.round(track.scrollLeft / track.clientWidth);
-        Array.from(dotsContainer.children).forEach((d,i) => d.classList.toggle('is-active', i===index));
-      });
-      window.addEventListener('resize', updateDots);
+
+      function onScroll() {
+        const { totalItemWidth, visibleCards } = getParams();
+        const scrollIndex = Math.round(track.scrollLeft / totalItemWidth);
+        const dotIndex = Math.floor(scrollIndex / visibleCards);
+
+        const dots = Array.from(dotsContainer.children);
+        dots.forEach((d, i) => d.classList.toggle('is-active', i === dotIndex));
+      }
+
       updateDots();
+      window.addEventListener('resize', () => { updateDots(); onScroll(); });
+      track.addEventListener('scroll', () => window.requestAnimationFrame(onScroll), { passive: true });
     })();
 
     // Modal
