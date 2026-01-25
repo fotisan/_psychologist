@@ -1,4 +1,4 @@
-/* styles.css (MATCHING GREEK DESIGN EXACTLY) */
+/* styles.css */
 
 /* =========================
    FONTS (Google Fonts)
@@ -159,6 +159,7 @@ svg{ display:block; }
 
 /* Nav */
 .nav{ display:none; gap: 8px; align-items:center; }
+
 .nav-toggle{
   display:inline-flex;
   align-items:center;
@@ -457,7 +458,7 @@ svg{ display:block; }
 #services .card:nth-child(3)::before{ content:"03"; }
 #services .card:nth-child(4)::before{ content:"04"; }
 
-/* Services Callout (The missing part!) */
+/* Services Callout */
 .services-callout{
   margin-top: 16px;
   border-radius: var(--radius-lg);
