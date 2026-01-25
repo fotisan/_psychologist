@@ -503,6 +503,8 @@ svg{ display:block; }
 
 /* Space */
 .space-grid{ display:grid; gap: 14px; }
+.space-col-left, .space-col-right { display: flex; flex-direction: column; gap: 14px; }
+
 .space-main, .space-tile{
   margin: 0;
   border-radius: var(--radius-lg);
@@ -513,7 +515,6 @@ svg{ display:block; }
 }
 .space-main img, .space-tile img{ width: 100%; height: 100%; object-fit: cover; display:block; }
 .space-main{ min-height: 280px; }
-.space-side{ display:grid; gap: 14px; }
 .space-tile{ min-height: 160px; }
 .space-notes{
   border-radius: var(--radius-lg);
@@ -748,13 +749,13 @@ svg{ display:block; }
 
   .help-grid{ grid-template-columns: 1fr 1fr; gap: 16px; }
   
-  /* Space Grid - No Stretch to avoid overlap illusion */
-  .space-grid{ grid-template-columns: 1.15fr .85fr; gap: 16px; align-items: start; }
+  /* Space Grid - Split 50-50 for clean Desktop look */
+  .space-grid{ grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
   
-  /* 1440x1024 Ratio Enforcement */
+  /* 1440x1024 Ratio for Large Images */
   .space-main, .about-media {
     min-height: auto;
-    aspect-ratio: 1440 / 1024;
+    aspect-ratio: 1440 / 1024; /* Desired 1440x1024 ratio */
     height: auto;
   }
   
