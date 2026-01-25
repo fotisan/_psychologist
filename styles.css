@@ -658,7 +658,6 @@ svg{ display:block; }
 }
 .floating-btn svg{ width: 20px; height: 20px; opacity: .9; }
 .floating-btn:hover{ transform: translateY(-2px); background: rgba(255,255,255,.95); border-color: rgba(200,165,123,.55); }
-.floating-btn--viber{ background: rgba(162,115,255,.16); border-color: rgba(162,115,255,.28); }
 .floating-btn--whatsapp{ background: rgba(127,174,160,.20); border-color: rgba(127,174,160,.35); }
 .floating-btn--phone{ background: rgba(200,165,123,.18); border-color: rgba(200,165,123,.35); }
 /* Tooltips */
@@ -719,7 +718,6 @@ svg{ display:block; }
 @keyframes iconPop{ from{ opacity: 0; transform: translateY(10px) scale(.88); } to{ opacity: .95; transform: translateY(0) scale(1); } }
 .contact-choice__label{ display: block; font-weight: 850; letter-spacing: -.1px; }
 .contact-choice__meta{ display: block; margin-top: 1px; font-size: 13px; color: rgba(31,29,26,.70); }
-.contact-choice--viber .contact-choice__icon{ border-color: rgba(162,115,255,.32); background: rgba(162,115,255,.16); }
 .contact-choice--whatsapp .contact-choice__icon{ border-color: rgba(127,174,160,.38); background: rgba(127,174,160,.18); }
 .contact-choice--phone .contact-choice__icon{ border-color: rgba(200,165,123,.38); background: rgba(200,165,123,.16); }
 
@@ -750,14 +748,24 @@ svg{ display:block; }
 
   .help-grid{ grid-template-columns: 1fr 1fr; gap: 16px; }
   .space-grid{ grid-template-columns: 1.15fr .85fr; gap: 16px; align-items: stretch; }
-  .space-main{ min-height: 420px; }
-  .space-tile{ min-height: 190px; }
+  
   .contact-cover{ height: 210px; }
   .hero-photo{ height: 260px; }
   .footer-inner{ flex-direction: row; justify-content: space-between; align-items: center; }
   
   .about-grid{ grid-template-columns: 1.15fr .85fr; gap: 16px; align-items: stretch; }
-  .about-media { min-height: 600px; height: auto; }
+  
+  /* --- 1440x1024 RATIO ADJUSTMENT FOR DESKTOP --- */
+  .about-media, .space-main {
+    min-height: auto;
+    /* Aspect ratio 1440/1024 ≈ 1.4:1 */
+    aspect-ratio: 1440 / 1024;
+    height: auto;
+  }
+  .space-main { min-height: 500px; } /* Fallback min height */
+  .about-media { min-height: 500px; } /* Fallback min height */
+  /* ------------------------------------------- */
+
   .faq-wrap{ grid-template-columns: 1fr .9fr; align-items: stretch; }
   .faq-media{ min-height: 360px; max-height: 520px; }
   .map-card{ min-height: 420px; }
